@@ -98,6 +98,8 @@ echo " "Here is what will be installed for my website:
 echo " "\* rvm
 echo "  "\o ruby gems
 echo "  "\o ruby
+echo " "If you wish to uninstall these dependencies after the installation, please
+echo " "run the ${underline}UNINSTALLER.sh${nonunderline} file with the ${underline}Terminal${nonunderline}.
 echo " "Thank you.;
 echo Please Enjoy!${nonbold};
 

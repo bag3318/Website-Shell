@@ -1,7 +1,9 @@
 #!/bin/sh
 
-# Define preset variables
+# code > english comments available
 
+# Define preset variables
+# ===========================
 # Text Emphasis
 normal=$(tput sgr0);      # Select normal mode
 bold=`tput bold`;         # Select bold mode
