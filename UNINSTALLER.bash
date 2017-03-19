@@ -85,6 +85,7 @@ On_IWhite='\033[0;107m';   # White
 
 echo Hey there,;
 echo " "My job is to uninstall the following:;
+echo " "\* rvm;
 echo " "\* User version of Ruby;
 echo " "\* All Ruby Gems including itself;
 
