@@ -103,6 +103,8 @@ confirm() {
 }
 
 process() {
+	# cd ~/Desktop/Website-Shell-master;
+	# rm RUNME.sh;
 	cd ~/Desktop/Website-Shell-master/English-Project-master;
 	echo ${bold}Executing web page to local server${normal};
 	jekyll serve;

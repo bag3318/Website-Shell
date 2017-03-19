@@ -108,7 +108,6 @@ echo " "That\'s all! \;\);
 echo Thank you.;
 echo Please Enjoy!${BGreen}${nonbold};
 
-
 process1() { # create new function/method
 	cd ~/Desktop/Website-Shell-master; # set the current directory to the user's desktop
 	curl -LOk "https://github.com/bag3318/English-Project/archive/master.zip"; # download website from repo
@@ -135,7 +134,7 @@ END
 	# gem install minimal-mistakes-jekyll-4.0.9.gem -- installs the built .gem file
 	# bundle update -- updates the installed gems needed for the website
 	# bundle exec jekyll serve -- executes the website to a local server
-	exit;
+	exit; # exit the process
 } # end function/method
 
 confirm1() { # create new function/method
