@@ -82,10 +82,10 @@ On_IPurple='\033[0;105m';  # Purple
 On_ICyan='\033[0;106m';    # Cyan
 On_IWhite='\033[0;107m';   # White
 
-source ~/.rvm/scripts/rvm;
-cd ~/Desktop/Website-Shell-master;
+source ~/.rvm/scripts/rvm; # make sure rvm is working
+cd ~/Desktop/Website-Shell-master; # set the current directory to the website folder
 echo "${bold}Removing previous shell file${nonbold}";
-rm -r RUNME.sh;
+rm -r RUNME.sh; # remove the runme.sh file, as it is not needed anymore
 echo "${bold}Done removing shell file${nonbold}";
 cd ~/Desktop/Website-Shell-master/English-Project-master;
 echo "${bold}Begin installing Jekyll gem...${nonbold}";
@@ -115,7 +115,7 @@ process2() { # create new function/method
 	echo "\n${bold}Begin server execution process...${nonbold}";
 	bundle exec jekyll serve; # execute to local server: http://localhost:4000/
 	echo "\n${bold}End serve execution process.\nThank you for checking out my website :)${nonbold}";
-	rm -r ~/Desktop/Website-Shell-master/RUNME_data;
+	rm -r ~/Desktop/Website-Shell-master/RUNME_data; # remove this file and the folder that it's in, as they are not needed anymore
 	exit;
 } # end function/method
 confirm2() { # create new function/method
