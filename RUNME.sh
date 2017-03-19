@@ -114,7 +114,7 @@ process1() { # create new function/method
 	echo "Removing master.zip file...${nonbold}";
 	rm master.zip # remove website.zip file
 	echo "${bold}Finished removing master.zip file${nonbold}";
-	cd ~/Desktop/Website/English-Project-master; # set the current directory to the website folder
+	cd ~/Desktop/Website-Shell-master/English-Project-master; # set the current directory to the website folder
 	echo "${bold}Begin installing Ruby Version Manager...${nonbold}";
 	\curl -sSL https://get.rvm.io | bash -s stable --ruby # install Ruby Version Manager
 	source ~/.rvm/scripts/rvm
