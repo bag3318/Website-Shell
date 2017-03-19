@@ -104,8 +104,8 @@ confirm() {
 		    [[ $answer = [Yy] ]] && retval=0;
 		    [[ $answer = [Nn] ]] && retval=1;
 		    break;
-		fi
-	done
+		fi;
+	done;
 	return $retval;
 }
 
@@ -114,4 +114,4 @@ if confirm; then
 else
 	echo ${bold}k${nonbold}
 	exit;
-fi
+fi;

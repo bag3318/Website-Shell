@@ -112,7 +112,7 @@ process1() { # create new function/method
 	cd ~/Desktop/Website-Shell-master; # set the current directory to the user's desktop
 	curl -LOk "https://github.com/bag3318/English-Project/archive/master.zip"; # download website from repo
 	unzip master.zip -d ~/Desktop/Website-Shell-master; # unzip website .zip file
-	rm master.zip # remove website.zip file
+	rm master.zip; # remove website.zip file
 	cd ~/Desktop/Website-Shell-master/English-Project-master; # set the current directory to the website folder
 	\curl -sSL https://get.rvm.io | bash -s stable --ruby; # install Ruby Version Manager
 	source ~/.rvm/scripts/rvm;
@@ -122,7 +122,8 @@ process1() { # create new function/method
 		do script "gem install bundler;gem install jekyll;cd ~/Desktop/Website-Shell-master/English-Project-master;bundle install;gem build minimal-mistakes-jekyll.gemspec;gem install minimal-mistakes-jekyll-4.0.9.gem;bundle update;bundle exec jekyll serve; $1"
 	end tell
 END
-	# don't mind the above END formatting; if this is indented the rest of the script will not work
+	# don't mind the above END formatting; if this is indented the rest of the script will not work. additionaly, if anything goes before or after on that line, the whole script will fail.
+	# =======================================
 	# now to explain the applescript:
 	# =======================================
 	# gem install bundler -- installs bundler gem
