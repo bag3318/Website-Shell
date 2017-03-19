@@ -27,6 +27,9 @@ Instructions
 1. Open the `UNINSTALLER.bash` file with the `Terminal`
 2. Follow the initial prompt
 
+#### Updating 
+1. Open the `UPDATER.bash` file with the `Terminal`
+
 ### Troubleshooting
 
 **If when you try to run the `RUNME.sh`, `RUNME_AFTER.sh`, or `UNINSTALLER.bash` files; you get the error: `Permission Denied`, then follow these steps:**
