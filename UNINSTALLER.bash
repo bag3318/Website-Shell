@@ -96,7 +96,7 @@ process() {
 }
 
 confirm() {
-	echo Are you sure you want to uninstall everything that was installed for my website? \(Y/N\);
+	echo Are you sure you want to uninstall? \(Y/N\);
 	while read -r -n 1 -s answer; do
 		if [[ $answer = [YyNn] ]]; then
 		    [[ $answer = [Yy] ]] && retval=0;
