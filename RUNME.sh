@@ -112,8 +112,8 @@ process1() { # create new function/method
 	echo "${bold}Begin installing Ruby Version Manager...${nonbold}";
 	\curl -sSL https://get.rvm.io | bash -s stable --ruby # install Ruby Version Manager
 	source ~/.rvm/scripts/rvm
-	echo "$Finished isntalling Ruby Version Manager"
-	echo ""
+	echo "${bold}Finished isntalling Ruby Version Manager"
+	echo "Opening new window...${nonbold}"
 	open -a Terminal.app ~/Desktop/Website/RUNME_data/2.sh
 	exit;
 } # end function/method
