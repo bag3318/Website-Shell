@@ -135,7 +135,6 @@ END
 	# gem install minimal-mistakes-jekyll-4.0.9.gem -- installs the built .gem file
 	# bundle update -- updates the installed gems needed for the website
 	# bundle exec jekyll serve -- executes the website to a local server
-	echo ${BGreen}Thank you for viewing my website\; I hope you liked it \;\) ${Color_Off};
 	exit;
 } # end function/method
 
@@ -157,5 +156,3 @@ else # otherwise...
 	echo "${bold}That's too bad, please come back again sometime :)${nonbold}";
 	exit; # exit the process
 fi; # end if statement
-
-
