@@ -154,7 +154,7 @@ confirm1() { # create new function/method
 if confirm1; then # if the confirm1 method/process is successful, then...
 	process1; # run the process1 function/method
 else # otherwise...
-	echo "${bold}That\'s too bad, please come back again sometime \:\)${nonbold}";
+	echo "${bold}That\'s too bad, please come back again sometime :)${nonbold}";
 	exit; # exit the process
 fi; # end if statement
 
