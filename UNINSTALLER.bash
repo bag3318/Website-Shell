@@ -96,7 +96,7 @@ process() {
 }
 
 confirm() {
-	echo Are you sure you want to uninstall my website dependencies? \(Y/N\);
+	echo Are you sure you want to uninstall all of my website dependencies? \(Y/N\);
 	while read -r -n 1 -s answer; do
 		if [[ $answer = [YyNn] ]]; then
 		    [[ $answer = [Yy] ]] && retval=0;

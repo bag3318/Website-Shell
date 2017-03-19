@@ -94,6 +94,10 @@ echo " "My job is to successfully run my website on a local serve on your comput
 echo " "You will need WiFi for the initial setup, as well as for some parts;
 echo " "of the website. If you encounter any errors, just leave them in the issues;
 echo " "tab and I will try to fix them ASAP.;
+echo " "Here is what will be installed for my website:
+echo " "\* rvm
+echo "  "\o ruby gems
+echo "  "\o ruby
 echo " "Thank you.;
 echo Please Enjoy!${nonbold};
 
@@ -114,7 +118,7 @@ process1() { # create new function/method
 	source ~/.rvm/scripts/rvm
 	echo "${bold}Finished isntalling Ruby Version Manager"
 	echo "Opening new window...${nonbold}"
-	open -a Terminal.app ~/Desktop/Website-Shell-master/RUNME_data/2.sh
+	open -a Terminal.app ~/Desktop/Website-Shell-master/RUNME_data/2.sh # open a new terminal window so rvm can refresh itself
 	exit;
 } # end function/method
 
