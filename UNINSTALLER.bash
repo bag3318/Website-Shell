@@ -88,7 +88,7 @@ echo " "My job is to uninstall the following:;
 echo " "\* rvm;
 echo " "\* User version of Ruby;
 echo " "\* All Ruby Gems including itself;
-echo So basically everything that was installed with the ${underline}RUNME.sh${nonunderline} file
+echo So basically everything that was installed with the ${underline}RUNME.sh${nonunderline} file;
 
 process() {
 	echo "${bold}Uninstalling...${nonbold}";

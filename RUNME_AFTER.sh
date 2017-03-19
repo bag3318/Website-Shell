@@ -86,7 +86,7 @@ On_IWhite='\033[0;107m';   # White
 
 echo ${bold}This shell file will run the website if the RUNME.sh file;
 echo has already run successfully. Otherwise, go run the;
-echo RUNME.sh file first.${normal};
+echo ${underline}RUNME.sh${nonunderline} file first.${normal};
 
 confirm() {
 	echo ${bold}Note: Once the server is running, copy and paste this into your browser\'s URL;
@@ -97,8 +97,8 @@ confirm() {
 		    [[ $answer = [Cc] ]] && retval=0;
 		    [[ $answer = [Qq] ]] && retval=1;
 		    break;
-		fi
-	done
+		fi;
+	done;
 	return $retval;
 }
 
@@ -117,4 +117,4 @@ if confirm; then
 else
 	echo ${bold}That\'s to bad, please come back again sometime \:\)${nonbold}
 	exit;
-fi
+fi;
