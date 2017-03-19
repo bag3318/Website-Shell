@@ -93,9 +93,7 @@ echo ${bold}Hi there,;
 echo " "My job is to successfully run my website on a local serve on your computer.;
 echo " "You will need WiFi for the initial setup, as well as for some parts;
 echo " "of the website. If you encounter any errors, just leave them in the issues;
-echo " "tab and I will try to fix them ASAP. Finally, you will need to type in your;
-echo " "password 1 time for 2 different command line installation processes \(this is;
-echo " "due to security reasons\).
+echo " "tab and I will try to fix them ASAP.;
 echo " "Thank you.;
 echo Please Enjoy!${nonbold};
 
