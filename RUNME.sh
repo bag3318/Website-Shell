@@ -145,8 +145,8 @@ confirm1() { # create new function/method
 		    [[ $answer = [Cc] ]] && retval=0; # if the users input is either C or c, Q or q then...
 		    [[ $answer = [Qq] ]] && retval=1; # if the the users input it C or c set the retval = 0
 		    break; # break on command when done 
-		fi # if the users input is Q or q set the retval = 1
-	done # end if statement
+		fi; # if the users input is Q or q set the retval = 1
+	done; # end if statement
 	return $retval; # return the command: retval's value
 } # end function/method
 
@@ -155,6 +155,6 @@ if confirm1; then # if the confirm1 method/process is successful, then...
 else # otherwise...
 	echo "${bold}That\'s too bad, please come back again sometime \:\)${nonbold}";
 	exit; # exit the process
-fi # end if statement
+fi; # end if statement
 
 
