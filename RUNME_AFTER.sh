@@ -104,7 +104,7 @@ confirm() {
 
 process() {
 	cd ~/Desktop/Website/English-Project-master;
-	rm -r ~/Desktop/Website/RUNME_data
+	# rm -r ~/Desktop/Website/RUNME_data
 	echo ${bold}Executing web page to local server${normal};
 	jekyll serve;
 	echo "";
