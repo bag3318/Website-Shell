@@ -28,11 +28,12 @@ Instructions
 2. Follow the initial prompt
 
 #### Updating 
+
 1. Open the `UPDATER.bash` file with the `Terminal`
 
 ### Troubleshooting
 
-**If when you try to run the `RUNME.sh`, `RUNME_AFTER.sh`, or `UNINSTALLER.bash` files; you get the error: `Permission Denied`, then follow these steps:**
+**If when you try to run the `RUNME.sh`, `RUNME_AFTER.sh`, `UPDATER.bash`, or `UNINSTALLER.bash` files; you get the error: `Permission Denied`, then follow these steps:**
 
 1. Open the `Terminal`
 2. type in `chmod +x ` (make sure to add the `space` after `+x`)
