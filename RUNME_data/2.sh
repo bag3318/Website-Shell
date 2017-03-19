@@ -133,6 +133,6 @@ confirm2() { # create new function/method
 if confirm2; then # if the confirm1 method/process is successful, then...
 	process2; # run the process1 function/method
 else # otherwise...
-	echo "${bold}That\'s too bad, come back again sometime please \:\)${nonbold}";
+	echo "${bold}That\'s too bad, please come back again sometime \:\)${nonbold}";
 	exit; # exit the process
 fi # end if statement

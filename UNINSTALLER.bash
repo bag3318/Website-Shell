@@ -90,8 +90,8 @@ echo " "\* All Ruby Gems including itself;
 
 process() {
 	echo "${bold}Uninstalling...${nonbold}";
-	rvm implode;
-	echo "${bold}Finished!${nonbold}"
+	rvm implode; # this will uninstall everything
+	echo "${bold}Finished!${nonbold}";
 	exit;
 }
 
@@ -110,5 +110,6 @@ confirm() {
 if confirm; then
 	process;
 else
+	echo ${bold}k${nonbold}
 	exit;
 fi
