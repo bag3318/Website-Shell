@@ -9,6 +9,7 @@ Instructions
 #### First Time Installing
 
 1. Download the `.zip` file for this repo and move it to your `Desktop` (__this is important__)
+   * To download, click on the green button above and then click `Download ZIP`
 2. Extract the `.zip` file by `double clicking` it
 3. Delete the `.zip` file as it is not needed anymore
 4. Open up the extracted folder
