@@ -120,7 +120,7 @@ process1() { # create new function/method
 	# begin applescript
 	osascript <<END
 	tell application "Terminal"
-		do script "gem install bundler;gem install jekyll;cd ~/Desktop/Website-Shell-master/English-Project-master;bundle install;gem build minimal-mistakes-jekyll.gemspec;gem install minimal-mistakes-jekyll-4.0.9.gem;bundle update;bundle exec jekyll serve; $1"
+		do script "bold=`tput bold`; gem install bundler;gem install jekyll;cd ~/Desktop/Website-Shell-master/English-Project-master;bundle install;gem build minimal-mistakes-jekyll.gemspec;gem install minimal-mistakes-jekyll-4.0.9.gem;bundle update;bundle exec jekyll serve; $1"
 	end tell
 END
 	# don't mind the above END formatting; if this is indented the rest of the script will not work. additionaly, if anything goes before or after on that line, the whole script will fail.
@@ -154,7 +154,7 @@ confirm1() { # create new function/method
 if confirm1; then # if the confirm1 method/process is successful, then...
 	process1; # run the process1 function/method
 else # otherwise...
-	echo "${bold}That\'s too bad, please come back again sometime :)${nonbold}";
+	echo "${bold}That's too bad, please come back again sometime :)${nonbold}";
 	exit; # exit the process
 fi; # end if statement
 
