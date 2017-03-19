@@ -17,7 +17,7 @@ Instructions
    * Just search `Terminal` with spotlight (<kbd>Command</kbd>+<kbd>Space</kbd> &gt; `Terminal.app` &gt; <kbd>return</kbd>), and drag the `RUNME.sh` file onto the window and hit <kbd>return</kbd>
 6. Follow the initial and ending prompts (you should eventually get 2 Terminal windows)
 
-#### Second Time Running
+#### After Install
 
 1. Open the `RUNME_AFTER.sh` file with the `Terminal`
 2. Follow the prompts
