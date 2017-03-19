@@ -104,8 +104,8 @@ confirm() {
 
 process() {
 	cd ~/Desktop/Website/English-Project-master;
-	rm -r ~/Desktop/Website/do_not_delete/2.sh;
-	echo ${bold}Executing web page local server${normal};
+	rm -r ~/Desktop/Website/RUNME_data
+	echo ${bold}Executing web page to local server${normal};
 	jekyll serve;
 	echo "";
 	echo ${bold}Finished executing local web server;

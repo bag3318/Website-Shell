@@ -116,7 +116,7 @@ process1() { # create new function/method
 	source ~/.rvm/scripts/rvm
 	echo "$Finished isntalling Ruby Version Manager"
 	echo ""
-	open -a Terminal.app ~/Desktop/Website/do_not_delete/2.sh
+	open -a Terminal.app ~/Desktop/Website/RUNME_data/2.sh
 	exit;
 } # end function/method
 
