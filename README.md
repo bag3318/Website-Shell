@@ -39,3 +39,7 @@ Instructions
 > **That should fix it ;)**
 
 __For any other issues, please leave them in the issues tab so I can solve them ASAP. Thanks__
+
+### For Windows 7/8/8.1/10
+
+#### COMING SOON!

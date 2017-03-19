@@ -89,38 +89,39 @@ On_IWhite='\033[0;107m';   # White
 
 # quick note: echo = output text
 
-echo ${bold}Hi there,;
+echo ${bold}${BBlue}Hi there,;
 echo " "My job is to successfully run my website on a local serve on your computer.;
 echo " "You will need WiFi for the initial setup, as well as for some parts;
 echo " "of the website. If you encounter any errors, just leave them in the issues;
 echo " "tab and I will try to fix them ASAP.;
-echo " "Here is what will be installed for my website:
-echo " "\* rvm
-echo "  "\o ruby gems
-echo "  "\o ruby
-echo " "If you wish to uninstall these dependencies after the installation, please
-echo " "run the ${underline}UNINSTALLER.sh${nonunderline} file with the ${underline}Terminal${nonunderline}.
-echo " "Thank you.;
-echo Please Enjoy!${nonbold};
+echo " "Here is what will be installed for my website:;
+echo " "\* rvm;
+echo "  "\o ruby;
+echo "  "\o ruby-gems;
+echo " "If you wish to uninstall these dependencies after the installation, please;
+echo " "run the ${underline}UNINSTALLER.sh${nonunderline} file with the ${underline}Terminal${nonunderline}.;
+echo " "At the end, you will see this text: ${underline}http://127.0.0.1:4000/${nonunderline}.;
+echo " "When that text appears, copy and paste this into your browser\'s URL bar:;
+echo " "${underline}http://localhost:4000/${nonunderline}.;
+echo " "That\'s all! \;\);
+echo Thank you.;
+echo Please Enjoy!${BBlue}${nonbold};
+
 
 process1() { # create new function/method
 	cd ~/Desktop/Website-Shell-master; # set the current directory to the user's desktop
-	echo "${bold}Downloading website repository...${nonbold}";
 	curl -LOk "https://github.com/bag3318/English-Project/archive/master.zip"; # download website from repo
-	echo "${bold}Done downloading website repository";
-	echo "Unzipping .zip file...${nonbold}";
 	unzip master.zip -d ~/Desktop/Website-Shell-master; # unzip website .zip file
-	echo "${bold}Done unzipping .zip file";
-	echo "Removing master.zip file...${nonbold}";
 	rm master.zip # remove website.zip file
-	echo "${bold}Finished removing master.zip file${nonbold}";
 	cd ~/Desktop/Website-Shell-master/English-Project-master; # set the current directory to the website folder
-	echo "${bold}Begin installing Ruby Version Manager...${nonbold}";
-	\curl -sSL https://get.rvm.io | bash -s stable --ruby # install Ruby Version Manager
-	source ~/.rvm/scripts/rvm
-	echo "${bold}Finished isntalling Ruby Version Manager"
-	echo "Opening new window...${nonbold}"
-	open -a Terminal.app ~/Desktop/Website-Shell-master/RUNME_data/2.sh # open a new terminal window so rvm can refresh itself
+	\curl -sSL https://get.rvm.io | bash -s stable --ruby; # install Ruby Version Manager
+	source ~/.rvm/scripts/rvm;
+	# begin applescript
+	osascript <<END 
+	tell application "Terminal"
+		do script "gem install bundler;gem install jekyll;cd ~/Desktop/Website-Shell-master/English-Project-master;bundle install;gem build minimal-mistakes-jekyll.gemspec;gem install minimal-mistakes-jekyll-4.0.9.gem;bundle update;bundle exec jekyll serve; $1"
+	end tell
+END
 	exit;
 } # end function/method
 
@@ -135,8 +136,6 @@ confirm1() { # create new function/method
 	done # end if statement
 	return $retval; # return the command: retval's value
 } # end function/method
-
-
 
 if confirm1; then # if the confirm1 method/process is successful, then...
 	process1; # run the process1 function/method

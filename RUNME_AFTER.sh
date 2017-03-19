@@ -104,12 +104,11 @@ confirm() {
 
 process() {
 	cd ~/Desktop/Website-Shell-master/English-Project-master;
-	# rm -r ~/Desktop/Website/RUNME_data
 	echo ${bold}Executing web page to local server${normal};
 	jekyll serve;
 	echo "";
 	echo ${bold}Finished executing local web server;
-	echo Thanks for viewing my website :\)${normal};
+	echo Thanks for viewing my website \:\)${normal};
 	exit;
 }
 
