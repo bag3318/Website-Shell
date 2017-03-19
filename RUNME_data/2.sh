@@ -88,7 +88,6 @@ echo "${bold}Removing previous shell file${nonbold}";
 rm -r RUNME.sh;
 echo "${bold}Done removing shell file${nonbold}";
 cd ~/Desktop/Website-Shell-master/English-Project-master;
-rvm use ruby-2.4.0;
 echo "${bold}Begin installing Jekyll gem...${nonbold}";
 gem install jekyll; # install Jekyll gem
 echo "${bold}Done installing Jekyll gem"
@@ -116,7 +115,7 @@ process2() { # create new function/method
 	echo "\n${bold}Begin server execution process...${nonbold}";
 	bundle exec jekyll serve; # execute to local server: http://localhost:4000/
 	echo "\n${bold}End serve execution process.\nThank you for checking out my website :)${nonbold}";
-	rm -r ~/Desktop/Website/RUNME_data;
+	rm -r ~/Desktop/Website-Shell-master/RUNME_data;
 	exit;
 } # end function/method
 confirm2() { # create new function/method
