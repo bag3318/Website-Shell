@@ -89,7 +89,7 @@ On_IWhite='\033[0;107m';   # White
 
 # quick note: echo = output text
 
-echo ${bold}${BBlue}Hi there,;
+echo ${bold}${BGreen}Hi there,;
 echo " "My job is to successfully run my website on a local serve on your computer.;
 echo " "You will need WiFi for the initial setup, as well as for some parts;
 echo " "of the website. If you encounter any errors, just leave them in the issues;
@@ -105,7 +105,7 @@ echo " "When that text appears, copy and paste this into your browser\'s URL bar
 echo " "${underline}http://localhost:4000/${nonunderline}.;
 echo " "That\'s all! \;\);
 echo Thank you.;
-echo Please Enjoy!${BBlue}${nonbold};
+echo Please Enjoy!${BGreen}${nonbold};
 
 
 process1() { # create new function/method
@@ -117,11 +117,23 @@ process1() { # create new function/method
 	\curl -sSL https://get.rvm.io | bash -s stable --ruby; # install Ruby Version Manager
 	source ~/.rvm/scripts/rvm;
 	# begin applescript
-	osascript <<END 
+	osascript <<END
 	tell application "Terminal"
 		do script "gem install bundler;gem install jekyll;cd ~/Desktop/Website-Shell-master/English-Project-master;bundle install;gem build minimal-mistakes-jekyll.gemspec;gem install minimal-mistakes-jekyll-4.0.9.gem;bundle update;bundle exec jekyll serve; $1"
 	end tell
-END # don't mind this; if this is indented the rest of the script will not work
+END
+	# don't mind the above END formatting; if this is indented the rest of the script will not work
+	# now to explain the applescript:
+	# =======================================
+	# gem install bundler -- installs bundler gem
+	# gem install jekyll -- installs all jekyll gems
+	# cd ~/Desktop/Website-Shell-master/English-Project-master -- sets current directory to the website project folder
+	# bundle install -- installs all of the needed gems for the website 
+	# gem build minimal-mistakes-jekyll.gemspec -- builds the .gemspec file into a .gem file
+	# gem install minimal-mistakes-jekyll-4.0.9.gem -- installs the built .gem file
+	# bundle update -- updates the installed gems needed for the website
+	# bundle exec jekyll serve -- executes the website to a local server
+	echo "${BGreen}Thank you for viewing my website\; I hope you liked it \;\) ${BGreen}";
 	exit;
 } # end function/method
 
@@ -143,4 +155,5 @@ else # otherwise...
 	echo "${bold}That\'s too bad, please come back again sometime \:\)${nonbold}";
 	exit; # exit the process
 fi # end if statement
+
 
