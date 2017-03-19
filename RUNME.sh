@@ -98,12 +98,12 @@ echo " "Thank you.;
 echo Please Enjoy!${nonbold};
 
 process1() { # create new function/method
-	cd ~/Desktop/Website; # set the current directory to the user's desktop
+	cd ~/Desktop/Website-Shell-master; # set the current directory to the user's desktop
 	echo "${bold}Downloading website repository...${nonbold}";
 	curl -LOk "https://github.com/bag3318/English-Project/archive/master.zip"; # download website from repo
 	echo "${bold}Done downloading website repository";
 	echo "Unzipping .zip file...${nonbold}";
-	unzip master.zip -d ~/Desktop/Website; # unzip website .zip file
+	unzip master.zip -d ~/Desktop/Website-Shell-master; # unzip website .zip file
 	echo "${bold}Done unzipping .zip file";
 	echo "Removing master.zip file...${nonbold}";
 	rm master.zip # remove website.zip file
@@ -114,7 +114,7 @@ process1() { # create new function/method
 	source ~/.rvm/scripts/rvm
 	echo "${bold}Finished isntalling Ruby Version Manager"
 	echo "Opening new window...${nonbold}"
-	open -a Terminal.app ~/Desktop/Website/RUNME_data/2.sh
+	open -a Terminal.app ~/Desktop/Website-Shell-master/RUNME_data/2.sh
 	exit;
 } # end function/method
 

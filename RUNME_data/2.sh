@@ -83,11 +83,11 @@ On_ICyan='\033[0;106m';    # Cyan
 On_IWhite='\033[0;107m';   # White
 
 source ~/.rvm/scripts/rvm;
-cd ~/Desktop/Website;
+cd ~/Desktop/Website-Shell-master;
 echo "${bold}Removing previous shell file${nonbold}";
 rm -r RUNME.sh;
 echo "${bold}Done removing shell file${nonbold}";
-cd ~/Desktop/Website/English-Project-master;
+cd ~/Desktop/Website-Shell-master/English-Project-master;
 rvm use ruby-2.4.0;
 echo "${bold}Begin installing Jekyll gem...${nonbold}";
 gem install jekyll; # install Jekyll gem
