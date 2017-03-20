@@ -1,6 +1,12 @@
 #!/bin/sh
 
 # Code > English comments available
+# -------------------------------
+# Key: 
+# -------------------------------
+# `#` = comment in shell script
+# `--` comment in apple script
+
 
 # Define preset variables
 # =============================
