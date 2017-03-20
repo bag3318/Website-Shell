@@ -32,29 +32,36 @@ Instructions
 3. Delete the `.zip` file as it is not needed anymore
 4. Open up the extracted folder
 5. Open the `RUNME.sh` file with the `Terminal`
-   * Just search `Terminal` with spotlight (<kbd>Command</kbd>+<kbd>Space</kbd> &gt; `Terminal.app` &gt; <kbd>return</kbd>), and drag the `RUNME.sh` file onto the window and hit <kbd>return</kbd>
+   * Just search `Terminal.app` with spotlight (<kbd>Command</kbd>+<kbd>Space</kbd> &gt; `Terminal.app` &gt; <kbd>return</kbd>), and drag the `RUNME.sh` file onto the window and hit <kbd>return</kbd>
 6. Follow the initial and ending prompts (you should eventually get 2 Terminal windows)
 
 #### Any Time After First Time
 
 1. Open the `RUNME_AFTER.sh` file with the `Terminal`
+   * Open the `Terminal` by pressing <kbd>Command</kbd> and <kbd>Space</kbd> simultaneously and search `Terminal.app` and then hit <kbd>return</kbd>
+   * Then just proceed to drag the `RUNME_AFTER.sh` file into the `Terminal` and press <kbd>return</kbd>
 2. Follow the prompts
 
 #### Uninstalling
 
 1. Open the `UNINSTALLER.bash` file with the `Terminal`
+   * Open the `Terminal` by pressing <kbd>Command</kbd> and <kbd>Space</kbd> simultaneously and search `Terminal.app` and then hit <kbd>return</kbd>
+   * Then just proceed to drag the `UNINSTALLER.sh` file into the `Terminal` and press <kbd>return</kbd>
 2. Follow the initial prompt
 
 #### Updating 
 
 1. Open the `UPDATER.bash` file with the `Terminal`
-
+   * Open the `Terminal` by pressing <kbd>Command</kbd> and <kbd>Space</kbd> simultaneously and search `Terminal.app` and then hit <kbd>return</kbd>
+   * Then just proceed to drag the `UNINSTALLER.sh` file into the `Terminal` and press <kbd>return</kbd>
+  
 ### Troubleshooting
 
 **If when you try to run the `RUNME.sh`, `RUNME_AFTER.sh`, `UPDATER.bash`, or `UNINSTALLER.bash` files; you get the error: `Permission Denied`, then follow these steps:**
 
 1. Open the `Terminal`
-2. type in `chmod +x ` (make sure to add the `space` after `+x`)
+   * Open the `Terminal` by pressing <kbd>Command</kbd> and <kbd>Space</kbd> simultaneously and search `Terminal.app` and then hit <kbd>return</kbd>
+2. Type in `chmod +x ` (make sure to add the `space` after `+x`)
 3. Then drag these files onto the terminal: `RUNME.sh`, `RUNME_AFTER.sh`, `UNINSTALLER.bash`, and `UPDATER.bash`
 4. Press <kbd>return</kbd>
  
