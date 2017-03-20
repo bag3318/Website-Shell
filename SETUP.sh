@@ -130,8 +130,8 @@ process1() { # create new function/method
 	# DO NOT TOUCH THE CODE BELOW (between begin and end applescript); EVEN ADDING A SPACE WILL SCREW EVERYTHING UP!
 # -- begin applescript
 osascript <<EOS
-tell application "Terminal"
-do script "
+tell application "Terminal" -- tells the terminal application to ...
+do script " # do this script: 
 echo 'Installing bundler gem...';
 gem install bundler; # installs bundler gem
 echo 'Done!';
@@ -154,8 +154,8 @@ echo 'Done!';
 echo 'Compiling and executing web page to local server...';
 bundle exec jekyll serve; # compiles and executes web page to local server
 echo 'End server execution process';
-$1"
-end tell
+$1" -- indicates that the bash script ends here
+end tell -- ends the tell function
 EOS
 # -- end applescript
 	exit; # exit the process
