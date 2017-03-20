@@ -33,7 +33,7 @@ Instructions
 4. Open up the extracted folder
 5. Open the `RUNME.sh` file with the `Terminal`
    * Just search `Terminal.app` with spotlight (<kbd>Command</kbd>+<kbd>Space</kbd> &gt; `Terminal.app` &gt; <kbd>return</kbd>), and drag the `RUNME.sh` file onto the window and hit <kbd>return</kbd>
-6. Follow the initial and ending prompts (you should eventually get 2 Terminal windows)
+6. Follow the initial and ending prompts (you should eventually get 2 `Terminal` windows)
 
 #### Any Time After First Time
 
