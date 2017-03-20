@@ -151,7 +151,7 @@ bundle update;
 echo 'Done!';
 echo 'Executing web page to local server...';
 bundle exec jekyll serve; 
-echo 'End server execution process'
+echo 'End server execution process';
 $1"
 end tell
 EOS
