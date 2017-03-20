@@ -1,5 +1,23 @@
+
 Website Installation
 ====================
+
+<!-- START doctoc -->
+
+**Table of Contents**
+
+- [Website Installation](#website-installation)
+  - [Instructions](#instructions)
+    - [For Macintosh OSX](#for-macintosh-osx)
+      - [First Time Installing](#first-time-installing)
+      - [After Install](#after-install)
+      - [Uninstalling](#uninstalling)
+      - [Updating](#updating)
+    - [Troubleshooting](#troubleshooting)
+    - [For Windows 7/8/8.1/10](#for-windows-788110)
+      - [COMING SOON!](#coming-soon)
+
+<!-- END doctoc -->
 
 Instructions
 ------------
