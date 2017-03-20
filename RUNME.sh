@@ -115,7 +115,7 @@ process1() { # create new function/method
 	cd ~/Desktop/Website-Shell-master/English-Project-master; # set the current directory to the website folder
 	\curl -sSL https://get.rvm.io | bash -s stable --ruby; # install Ruby Version Manager
 	source ~/.rvm/scripts/rvm;
-# DO NOT TOUCH THE CODE BELOW, EVEN ADDING A SPACE WILL SCREW EVERYTHING UP!
+# DO NOT TOUCH THE CODE BELOW (between begin and end applescript); EVEN ADDING A SPACE WILL SCREW EVERYTHING UP!
 # begin applescript
 osascript <<EOS
 tell application "Terminal"
