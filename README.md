@@ -31,15 +31,15 @@ Instructions
 2. Extract the `.zip` file by `double clicking` it
 3. Delete the `.zip` file as it is not needed anymore
 4. Open up the extracted folder
-5. Open the `RUNME.sh` file with the `Terminal`
+5. Open the `SETUP.sh` file with the `Terminal`
    * Just search `Terminal.app` with spotlight (<kbd>Command</kbd>+<kbd>Space</kbd> &gt; `Terminal.app` &gt; <kbd>return</kbd>), and drag the `RUNME.sh` file onto the window and hit <kbd>return</kbd>
 6. Follow the initial and ending prompts (you should eventually get 2 `Terminal` windows)
 
 #### Any Time After First Time
 
-1. Open the `RUNME_AFTER.sh` file with the `Terminal`
+1. Open the `RUN.sh` file with the `Terminal`
    * Open the `Terminal` by pressing <kbd>Command</kbd> and <kbd>Space</kbd> simultaneously and search `Terminal.app` and then hit <kbd>return</kbd>
-   * Then just proceed to drag the `RUNME_AFTER.sh` file into the `Terminal` and press <kbd>return</kbd>
+   * Then just proceed to drag the `RUN.sh` file into the `Terminal` and press <kbd>return</kbd>
 2. Follow the prompts
 
 #### Uninstalling
@@ -62,7 +62,7 @@ Instructions
 1. Open the `Terminal`
    * Open the `Terminal` by pressing <kbd>Command</kbd> and <kbd>Space</kbd> simultaneously and search `Terminal.app` and then hit <kbd>return</kbd>
 2. Type in `chmod +x ` (make sure to add the `space` after `+x`)
-3. Then drag these files onto the terminal: `RUNME.sh`, `RUNME_AFTER.sh`, `UNINSTALLER.bash`, and `UPDATER.bash`
+3. Then drag these files onto the terminal: `SETUP.sh`, `RUN.sh`, `UNINSTALLER.bash`, and `UPDATER.bash`
 4. Press <kbd>return</kbd>
  
 > **That should fix it ;)**

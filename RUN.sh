@@ -84,9 +84,9 @@ On_IWhite='\033[0;107m';   # White
 
 # quick note: echo = output text
 
-echo ${bold}This shell file will run the website if the RUNME.sh file;
+echo ${bold}This shell file will run the website if the SETUP.sh file;
 echo has already run successfully. Otherwise, go run the;
-echo ${underline}RUNME.sh${nonunderline} file first.${normal};
+echo ${underline}SETUP.sh${nonunderline} file first.${nonbold};
 
 confirm() {
 	echo ${bold}Note: Once the server is running, copy and paste this into your browser\'s URL;
@@ -104,7 +104,7 @@ confirm() {
 
 process() {
 	# cd ~/Desktop/Website-Shell-master;
-	# rm RUNME.sh;
+	# rm SETUP.sh;
 	cd ~/Desktop/Website-Shell-master/English-Project-master;
 	echo ${bold}Executing web page to local server${normal};
 	jekyll serve;
