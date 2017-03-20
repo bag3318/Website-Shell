@@ -77,4 +77,6 @@ __For any other issues, please leave them in the issues tab so I can solve them 
 
 #### COMING SOON!
 
+______________
+
 > __*Enjoy!*__
