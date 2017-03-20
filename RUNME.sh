@@ -116,7 +116,7 @@ process1() { # create new function/method
 	\curl -sSL https://get.rvm.io | bash -s stable --ruby; # install Ruby Version Manager
 	source ~/.rvm/scripts/rvm;
 # DO NOT TOUCH THE CODE BELOW (between begin and end applescript); EVEN ADDING A SPACE WILL SCREW EVERYTHING UP!
-# begin applescript
+# -- begin applescript
 osascript <<EOS
 tell application "Terminal"
 do script "
@@ -131,7 +131,7 @@ bundle exec jekyll serve;
 $1"
 end tell
 EOS
-# end applescript
+# -- end applescript
 	# =======================================
 	# AppleScript explanation
 	# =======================================
