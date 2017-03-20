@@ -111,26 +111,26 @@ echo Please Enjoy!${BGreen}${nonbold};
 
 process1() { # create new function/method
 	cd ~/Desktop/Website-Shell-master; # set the current directory to the user's desktop
-	echo 'Downloading website repository...'
+	echo 'Downloading website repository...';
 	curl -LOk "https://github.com/bag3318/English-Project/archive/master.zip"; # download website from repo
-	echo 'Done!'
-	echo 'Unzipping file...'
+	echo 'Done!';
+	echo 'Unzipping file...';
 	unzip master.zip -d ~/Desktop/Website-Shell-master; # unzip website .zip file
-	echo 'Done!'
-	echo 'Removing .zip file...'
+	echo 'Done!';
+	echo 'Removing .zip file...';
 	rm master.zip; # remove website.zip file
-	echo 'Done!'
+	echo 'Done!';
 	cd ~/Desktop/Website-Shell-master/English-Project-master; # set the current directory to the website folder
-	echo 'Downloading and installing rvm...'
+	echo 'Downloading and installing rvm...';
 	\curl -sSL https://get.rvm.io | bash -s stable --ruby; # install Ruby Version Manager
 	source ~/.rvm/scripts/rvm;
-	echo 'Done!'
-	echo 'Opening new window to refresh rvm...'
-	echo 'Done!'
+	echo 'Done!';
+	echo 'Opening new window to refresh rvm...';
+	echo 'Done!';
 	# DO NOT TOUCH THE CODE BELOW (between begin and end applescript); EVEN ADDING A SPACE WILL SCREW EVERYTHING UP!
 # -- begin applescript
 osascript <<EOS
-tell application "Terminal" -- tells the terminal application to ...
+tell application "Terminal" -- tells the Terminal application to ...
 do script " # do this script: 
 echo 'Installing bundler gem...';
 gem install bundler; # installs bundler gem
