@@ -9,7 +9,7 @@ bold=`tput bold`;         # Select bold mode
 nonbold=`tput sgr0` 	  # Select non-bold mode
 underline=`tput smul`;    # Select underline mode
 nonunderline=`tput rmul`; # Select non-underline mode
-
+#
 # Reset
 Color_Off='\033[0m';       # Text Reset
 
@@ -89,7 +89,7 @@ echo " "\* rvm;
 echo " "\* User version of Ruby;
 echo " "\* All Ruby Gems including itself;
 echo " "\* The website project folder \(English-Project-master\);
-echo So basically everything that was installed with the ${underline}RUNME.sh${nonunderline} file${nonbold};
+echo So basically everything that was installed with the ${underline}SETUP.sh${nonunderline} file${nonbold};
 
 process() {
 	echo "${bold}Uninstalling...${nonbold}";
@@ -100,7 +100,7 @@ process() {
 }
 
 confirm() {
-	echo Are you sure you want to uninstall all of my website dependencies? \(${bold}Y/N${nonbold}\);
+	echo Are you sure you want to uninstall? \(${bold}Y/N${nonbold}\);
 	while read -r -n 1 -s answer; do
 		if [[ $answer = [YyNn] ]]; then
 		    [[ $answer = [Yy] ]] && retval=0;
