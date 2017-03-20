@@ -62,6 +62,8 @@ Instructions
 
 __For any other issues, please leave them in the issues tab so I can solve them ASAP. Thanks__
 
+> Please note that anything in the `Terminal` that has the word `WARNING` (in caps or lower) next to it, or is in `yellow` color is not an error, so you won't have to worry about those things. Errors are *typically* `red` (*though not always*) and have the word `ERROR` (in caps or lower) next to them.
+
 ### For Windows 7/8/8.1/10
 
 #### COMING SOON!
