@@ -109,25 +109,49 @@ echo Please Enjoy!${BGreen}${nonbold};
 
 process1() { # create new function/method
 	cd ~/Desktop/Website-Shell-master; # set the current directory to the user's desktop
+	echo 'downloading website repository...'
 	curl -LOk "https://github.com/bag3318/English-Project/archive/master.zip"; # download website from repo
+	echo 'done!'
+	echo 'unzipping file...'
 	unzip master.zip -d ~/Desktop/Website-Shell-master; # unzip website .zip file
+	echo 'done!'
+	echo 'removing .zip file...'
 	rm master.zip; # remove website.zip file
+	echo 'done!'
 	cd ~/Desktop/Website-Shell-master/English-Project-master; # set the current directory to the website folder
+	echo 'downloading and installing rvm...'
 	\curl -sSL https://get.rvm.io | bash -s stable --ruby; # install Ruby Version Manager
 	source ~/.rvm/scripts/rvm;
+	echo 'done!'
+	echo 'opening new window to refresh rvm...'
+	echo 'done!'
 # DO NOT TOUCH THE CODE BELOW (between begin and end applescript); EVEN ADDING A SPACE WILL SCREW EVERYTHING UP!
 # -- begin applescript
 osascript <<EOS
 tell application "Terminal"
 do script "
+echo 'installing bundler gem...';
 gem install bundler;
+echo 'done!';
+echo 'installing jekyll gem';
 gem install jekyll;
+echo 'done!';
 cd ~/Desktop/Website-Shell-master/English-Project-master;
+echo 'installing gems needed for website to run...';
 bundle install;
+echo 'done!';
+echo 'building gemspec file...';
 gem build minimal-mistakes-jekyll.gemspec;
+echo 'done!';
+echo 'installing built .gem file...';
 gem install minimal-mistakes-jekyll-4.0.9.gem;
+echo 'done!';
+echo 'updating gems...';
 bundle update;
+echo 'done!';
+echo 'executing web page to local server...';
 bundle exec jekyll serve; 
+echo 'end server execution process'
 $1"
 end tell
 EOS
