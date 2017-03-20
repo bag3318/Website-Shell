@@ -86,7 +86,6 @@ On_ICyan='\033[0;106m';    # Cyan
 On_IWhite='\033[0;107m';   # White
 
 # =============================
- 
 
 # quick note: echo = output text
 
@@ -119,12 +118,13 @@ process1() { # create new function/method
 	# begin applescript
 	osascript <<END
 	tell application "Terminal"
-		do script "gem install bundler;gem install jekyll;cd ~/Desktop/Website-Shell-master/English-Project-master;bundle install;gem build minimal-mistakes-jekyll.gemspec;gem install minimal-mistakes-jekyll-4.0.9.gem;bundle update;bundle exec jekyll serve; $1"
+		do script "gem install bundler;
+		gem install jekyll;cd ~/Desktop/Website-Shell-master/English-Project-master;bundle install;gem build minimal-mistakes-jekyll.gemspec;gem install minimal-mistakes-jekyll-4.0.9.gem;bundle update;bundle exec jekyll serve; $1"
 	end tell
 END
-	# don't mind the above END formatting; if this is indented the rest of the script will not work. additionaly, if anything goes before or after on that line, the whole script will fail.
+	# don't mind the above END formatting; if that is indented the rest of the script will not work. additionaly, if anything goes before or after on the END on that line, the whole script will fail.
 	# =======================================
-	# now to explain the applescript:
+	# AppleScript explanation
 	# =======================================
 	# gem install bundler -- installs bundler gem
 	# gem install jekyll -- installs all jekyll gems

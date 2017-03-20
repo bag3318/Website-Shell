@@ -83,22 +83,24 @@ On_IPurple='\033[0;105m';  # Purple
 On_ICyan='\033[0;106m';    # Cyan
 On_IWhite='\033[0;107m';   # White
 
-echo Hey there,;
+echo ${bold}Hey there,;
 echo " "My job is to uninstall the following:;
 echo " "\* rvm;
 echo " "\* User version of Ruby;
 echo " "\* All Ruby Gems including itself;
-echo So basically everything that was installed with the ${underline}RUNME.sh${nonunderline} file;
+echo " "\* The website project folder \(English-Project-master\);
+echo So basically everything that was installed with the ${underline}RUNME.sh${nonunderline} file${nonbold};
 
 process() {
 	echo "${bold}Uninstalling...${nonbold}";
 	rvm implode; # this will uninstall everything
+	rm -r ~/Desktop/Website-Shell-master/English-Project-master;
 	echo "${bold}Finished!${nonbold}";
 	exit;
 }
 
 confirm() {
-	echo Are you sure you want to uninstall all of my website dependencies? \(Y/N\);
+	echo Are you sure you want to uninstall all of my website dependencies? \(${bold}Y/N${nonbold}\);
 	while read -r -n 1 -s answer; do
 		if [[ $answer = [YyNn] ]]; then
 		    [[ $answer = [Yy] ]] && retval=0;
@@ -112,6 +114,6 @@ confirm() {
 if confirm; then
 	process;
 else
-	echo ${bold}k${nonbold}
+	echo ${bold}k${nonbold};
 	exit;
 fi;

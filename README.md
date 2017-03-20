@@ -47,3 +47,5 @@ __For any other issues, please leave them in the issues tab so I can solve them 
 ### For Windows 7/8/8.1/10
 
 #### COMING SOON!
+
+> __*Enjoy!*__

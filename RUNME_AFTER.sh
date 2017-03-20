@@ -91,7 +91,7 @@ echo ${underline}RUNME.sh${nonunderline} file first.${normal};
 confirm() {
 	echo ${bold}Note: Once the server is running, copy and paste this into your browser\'s URL;
 	echo bar: ${underline}localhost:4000${nonunderline} and then hit ${underline}return${nonunderline}${normal};
-	echo Press ${bold}c${normal} to ${underline}continue${nonunderline} , or press ${bold}q${normal} to ${underline}quit${nonunderline} the process;
+	echo Press ${bold}c${nonbold} to ${underline}continue${nonunderline}, or press ${bold}q${nonbold} to ${underline}quit${nonunderline} the process;
 	while read -r -n 1 -s answer; do
 		if [[ $answer = [CcQq] ]]; then
 		    [[ $answer = [Cc] ]] && retval=0;
@@ -110,7 +110,7 @@ process() {
 	jekyll serve;
 	echo "";
 	echo ${bold}Finished executing local web server;
-	echo Thanks for viewing my website \:\)${normal};
+	echo Thank you for viewing my website \:\)${normal};
 	exit;
 }
 

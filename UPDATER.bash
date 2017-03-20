@@ -83,16 +83,34 @@ On_IPurple='\033[0;105m';  # Purple
 On_ICyan='\033[0;106m';    # Cyan
 On_IWhite='\033[0;107m';   # White
 
-echo ${bold}Updating.....${nonbold};
-rm -r ~/Desktop/Website-Shell-master/English-Project-master; # delete existing website project folder
-curl -LOk "https://github.com/bag3318/English-Project/archive/master.zip"; # download website from repo
-unzip master.zip -d ~/Desktop/Website-Shell-master; # unzip website .zip file
-rm master.zip; # remove website.zip file
-cd ~/Desktop/Website-Shell-master/English-Project-master; # set the current directory to the website folder
-echo ${bold}Done!${nonbold};
-exit;
+process() {
+	echo ${bold}Updating.....${nonbold};
+	rm -r ~/Desktop/Website-Shell-master/English-Project-master; # delete existing website project folder
+	curl -LOk "https://github.com/bag3318/English-Project/archive/master.zip"; # download website from repo
+	unzip master.zip -d ~/Desktop/Website-Shell-master; # unzip website .zip file
+	rm master.zip; # remove website.zip file
+	cd ~/Desktop/Website-Shell-master/English-Project-master; # set the current directory to the website folder
+	echo ${bold}Done!${nonbold};
+	exit;
+}
 
+confirm() {
+	echo Would you like to update the website?;
+	echo Press ${bold}u${normal} to ${underline}update${nonunderline}, or press ${bold}q${normal} to ${underline}quit${nonunderline} the process;
+	while read -r -n 1 -s answer; do
+		if [[ $answer = [UuQq] ]]; then
+		    [[ $answer = [Uu] ]] && retval=0;
+		    [[ $answer = [Qq] ]] && retval=1;
+		    break;
+		fi;
+	done;
+	return $retval;
+}
 
-
-
+if confirm; then
+	process;
+else
+	echo ${bold}k${nonbold}
+	exit;
+fi;
 
