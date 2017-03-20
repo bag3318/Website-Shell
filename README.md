@@ -10,7 +10,7 @@ Website Installation
   - [Instructions](#instructions)
     - [For Macintosh OSX](#for-macintosh-osx)
       - [First Time Installing](#first-time-installing)
-      - [After Install](#after-install)
+      - [Any Time After First Time](#any-time-after-first-time)
       - [Uninstalling](#uninstalling)
       - [Updating](#updating)
     - [Troubleshooting](#troubleshooting)
@@ -35,7 +35,7 @@ Instructions
    * Just search `Terminal` with spotlight (<kbd>Command</kbd>+<kbd>Space</kbd> &gt; `Terminal.app` &gt; <kbd>return</kbd>), and drag the `RUNME.sh` file onto the window and hit <kbd>return</kbd>
 6. Follow the initial and ending prompts (you should eventually get 2 Terminal windows)
 
-#### After Install
+#### Any Time After First Time
 
 1. Open the `RUNME_AFTER.sh` file with the `Terminal`
 2. Follow the prompts
