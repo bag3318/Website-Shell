@@ -115,8 +115,9 @@ process1() { # create new function/method
 	cd ~/Desktop/Website-Shell-master/English-Project-master; # set the current directory to the website folder
 	\curl -sSL https://get.rvm.io | bash -s stable --ruby; # install Ruby Version Manager
 	source ~/.rvm/scripts/rvm;
-	# begin applescript
-osascript <<END
+# DO NOT TOUCH THE CODE BELOW, EVEN ADDING A SPACE WILL SCREW EVERYTHING UP!
+# begin applescript
+osascript <<EOS
 tell application "Terminal"
 do script "
 gem install bundler;
@@ -129,8 +130,8 @@ bundle update;
 bundle exec jekyll serve; 
 $1"
 end tell
-END
-	# don't mind the above formatting; if that is indented the rest of the script will not work.
+EOS
+# end applescript
 	# =======================================
 	# AppleScript explanation
 	# =======================================
