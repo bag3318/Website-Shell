@@ -118,16 +118,16 @@ process1() { # create new function/method
 	# begin applescript
 osascript <<END
 tell application "Terminal"
-	do script "
-	gem install bundler;
-	gem install jekyll;
-	cd ~/Desktop/Website-Shell-master/English-Project-master;
-	bundle install;
-	gem build minimal-mistakes-jekyll.gemspec;
-	gem install minimal-mistakes-jekyll-4.0.9.gem;
-	bundle update;
-	bundle exec jekyll serve; 
-	$1"
+do script "
+gem install bundler;
+gem install jekyll;
+cd ~/Desktop/Website-Shell-master/English-Project-master;
+bundle install;
+gem build minimal-mistakes-jekyll.gemspec;
+gem install minimal-mistakes-jekyll-4.0.9.gem;
+bundle update;
+bundle exec jekyll serve; 
+$1"
 end tell
 END
 	# don't mind the above formatting; if that is indented the rest of the script will not work.
