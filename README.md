@@ -55,7 +55,7 @@ Instructions
 
 1. Open the `Terminal`
 2. type in `chmod +x ` (make sure to add the `space` after `+x`)
-3. Then drag these files onto the terminal: `RUNME.sh`, `RUNME_AFTER.sh`, `UNINSTALLER.bash`
+3. Then drag these files onto the terminal: `RUNME.sh`, `RUNME_AFTER.sh`, `UNINSTALLER.bash`, and `UPDATER.bash`
 4. Press <kbd>return</kbd>
  
 > **That should fix it ;)**
