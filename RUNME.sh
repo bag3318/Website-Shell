@@ -94,7 +94,7 @@ echo ${bold}${BGreen}Hi there,;
 echo " "My job is to successfully run my website on a local serve on your computer.;
 echo " "You will need WiFi for the initial setup, as well as for some parts;
 echo " "of the website. If you encounter any errors, just leave them in the issues;
-echo " "tab and I will try to fix them ASAP.;
+echo " "tab on github or email me and I will try to fix them ASAP.;
 echo " "Here is what will be installed for my website:;
 echo " "\* rvm;
 echo "  "\o ruby;
