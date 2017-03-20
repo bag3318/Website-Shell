@@ -127,48 +127,37 @@ process1() { # create new function/method
 	echo 'Done!'
 	echo 'Opening new window to refresh rvm...'
 	echo 'Done!'
-# DO NOT TOUCH THE CODE BELOW (between begin and end applescript); EVEN ADDING A SPACE WILL SCREW EVERYTHING UP!
+	# DO NOT TOUCH THE CODE BELOW (between begin and end applescript); EVEN ADDING A SPACE WILL SCREW EVERYTHING UP!
 # -- begin applescript
 osascript <<EOS
 tell application "Terminal"
 do script "
 echo 'Installing bundler gem...';
-gem install bundler;
+gem install bundler; # installs bundler gem
 echo 'Done!';
-echo 'Installing jekyll gem...';
-gem install jekyll;
+echo 'Installing jekyll gem...'; 
+gem install jekyll; # installs the jekyll gem
 echo 'Done!';
-cd ~/Desktop/Website-Shell-master/English-Project-master;
+cd ~/Desktop/Website-Shell-master/English-Project-master; # set the current directory to the website project folder
 echo 'Installing gems needed for website to run...';
-bundle install;
+bundle install; # installs gems needed for the website to run
 echo 'Done!';
 echo 'Building gemspec file...';
-gem build minimal-mistakes-jekyll.gemspec;
+gem build minimal-mistakes-jekyll.gemspec; # builds gemspec file
 echo 'Done!';
 echo 'Installing built .gem file...';
-gem install minimal-mistakes-jekyll-4.0.9.gem;
+gem install minimal-mistakes-jekyll-4.0.9.gem; # installs .gem file
 echo 'Done!';
 echo 'Updating gems...';
-bundle update;
+bundle update; # updates gems 
 echo 'Done!';
-echo 'Executing web page to local server...';
-bundle exec jekyll serve; 
+echo 'Compiling and executing web page to local server...';
+bundle exec jekyll serve; # compiles and executes web page to local server
 echo 'End server execution process';
 $1"
 end tell
 EOS
 # -- end applescript
-	# =======================================
-	# AppleScript explanation
-	# =======================================
-	# gem install bundler -- installs bundler gem
-	# gem install jekyll -- installs all jekyll gems
-	# cd ~/Desktop/Website-Shell-master/English-Project-master -- sets current directory to the website project folder
-	# bundle install -- installs all of the needed gems for the website 
-	# gem build minimal-mistakes-jekyll.gemspec -- builds the .gemspec file into a .gem file
-	# gem install minimal-mistakes-jekyll-4.0.9.gem -- installs the built .gem file
-	# bundle update -- updates the installed gems needed for the website
-	# bundle exec jekyll serve -- executes the website to a local server
 	exit; # exit the process
 } # end function/method
 
