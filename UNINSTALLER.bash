@@ -96,8 +96,8 @@ process1() {
 	echo "${bold}Uninstalling...${nonbold}";
 	rvm implode; # this will uninstall rvm
 	sudo rm -rf /Library/Developer/CommandLineTools; # this will uninstall xcode command line tools
-	sudo /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall)" # unistalls homebrew
-	sudo rm -r ~/Desktop/Website-Shell-master/English-Project-master; # this will remove the website project folder
+	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall)" # unistalls homebrew
+	rm -r ~/Desktop/Website-Shell-master/English-Project-master; # this will remove the website project folder
 }
 
 process2() {
@@ -141,7 +141,8 @@ confirm2() {
 if confirm1; then
 	process1;
 else
-	echo ${bold}Bye${nonbold};
+	echo ${bold}Done!;
+	echo Bye${nonbold};
 	exit;
 fi;
 if confirm2; then
