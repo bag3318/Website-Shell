@@ -17,6 +17,8 @@ bold=`tput bold`;         # Select bold mode
 nonbold=`tput sgr0` 	  # Select non-bold mode
 underline=`tput smul`;    # Select underline mode
 nonunderline=`tput rmul`; # Select non-underline mode
+italic='\e[3';
+nonitalic='\e[0m';
 
 # Reset
 Color_Off='\033[0m';       # Text Reset
@@ -94,7 +96,7 @@ On_IWhite='\033[0;107m';   # White
 # =============================
 
 # quick note: echo = output text
-
+echo ${italic}hello${nonitalic};
 echo ${bold}${BGreen}Hi there,;
 echo " "My job is to successfully run my website on a local serve on your computer.;
 echo " "You will need WiFi for the initial setup, as well as for some parts;
@@ -104,8 +106,8 @@ echo " "Here is what will be installed for my website:;
 echo " "\* rvm;
 echo "  "\o ruby;
 echo "  "\o ruby-gems;
-echo "  "\o xcode command line tools;
-echo "  "\o homebrew
+echo " "\* xcode command line tools;
+echo " "\* homebrew
 echo " "At the end, you will see this text: ${underline}http://127.0.0.1:4000/${nonunderline}.;
 echo " "When that text appears, copy and paste this into your browser\'s URL bar:;
 echo " "${underline}http://localhost:4000/${nonunderline}. Finally, if at any time;

@@ -55,6 +55,10 @@ Instructions
    * Open the `Terminal` by pressing <kbd>Command</kbd> and <kbd>Space</kbd> simultaneously and search `Terminal.app` and then hit <kbd>return</kbd>
    * Then just proceed to drag the `UNINSTALLER.sh` file into the `Terminal` and press <kbd>return</kbd>
   
+### How it Works
+
+The `SETUP.sh` shell script file will install what is needed to run the website on a Mac. This includes: `Homebrew`, `RVM`, and `xcode Command Line Tools`. Uninstalling is very easy as stated above. The `SETUP.sh` file will also download the website repository and extract the `.zip` file for you. Once all the above is installed, the website can compile itself using command line written in the `RUN.sh` and `SETUP.sh` shell files. The website will then begin to run on a local server (`http://localhost:4000/`). 
+  
 ### Troubleshooting
 
 **If when you try to run the `RUNME.sh`, `RUNME_AFTER.sh`, `UPDATER.bash`, or `UNINSTALLER.bash` files; you get the error: `Permission Denied`, then follow these steps:**
