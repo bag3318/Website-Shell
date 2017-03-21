@@ -124,7 +124,7 @@ process1() { # create new function/method
 
 process2() {
 	echo "Installing Homebrew...";
-	sudo chown /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"; # this installs homebrew
+	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"; # this installs homebrew
 	echo "Done!";
 	cd ~/Desktop/Website-Shell-master; # set the current directory to the user's desktop
 	echo 'Downloading website repository...';
@@ -149,7 +149,7 @@ process2() {
 
 process3() {
 # WARNING: DO NOT TOUCH THE CODE BELOW (between begin and end applescript); EVEN ADDING A SPACE WILL SCREW EVERYTHING UP!
-# WARNING 2: DO NOT FORMAT THE CODE BELOW; DOING SO WILL RESULT IN A COMPILATION ERROR!
+# WARNING 2: DO NOT INDENT/FORMAT THE CODE BELOW; DOING SO WILL RESULT IN A COMPILATION ERROR!
 # -- begin applescript
 osascript <<EOS
 tell application "Terminal" -- tells the Terminal application to ...
@@ -182,23 +182,23 @@ EOS
 # -- end applescript
 }
 
-confirm2() { # create new function/method
-	echo "Press ${bold}c${nonbold} to ${underline}continue${nonunderline}, or press ${bold}q${nonbold} to ${underline}quit${nonunderline} the process";
+confirm1() { # create new function/method
+	echo "${bold}PLEASE WAIT UNTIL XCODE COMMAND LINE TOOLS ARE DONE INSTALLING (UNLESS THEY ARE ALREADY INSTALLED; IF SO, YOU WILL GET AN ERROR ABOVE THIS LINE SAYING SO)! THEN PRESS ${underline}C${nonunderline} TO CONTINUE!${nonbold}";
 	while read -r -n 1 -s answer; do # enter a loop while reading the users input
-		if [[ $answer = [CcQq] ]]; then # if the users input is either C or c, Q or q then...
+		if [[ $answer = [Cc] ]]; then # if the users input is either C or c, Q or q then...
 		    [[ $answer = [Cc] ]] && retval=0; # if the users input is either C or c, Q or q then...
-		    [[ $answer = [Qq] ]] && retval=1; # if the the users input it C or c set the retval = 0
 		    break; # break on command when done 
 		fi; # if the users input is Q or q set the retval = 1
 	done; # end if statement
 	return $retval; # return the command: retval's value
 } # end function/method
 
-confirm1() { # create new function/method
-	echo "${bold}PLEASE WAIT UNTIL XCODE COMMAND LINE TOOLS ARE DONE INSTALLING (UNLESS THEY ARE ALREADY INSTALLED; IF SO, YOU WILL GET AN ERROR ABOVE THIS LINE SAYING SO)! THEN PRESS ${underline}C${nonunderline} TO CONTINUE!${nonbold}";
+confirm2() { # create new function/method
+	echo "Press ${bold}c${nonbold} to ${underline}continue${nonunderline}, or press ${bold}q${nonbold} to ${underline}quit${nonunderline} the process";
 	while read -r -n 1 -s answer; do # enter a loop while reading the users input
-		if [[ $answer = [Cc] ]]; then # if the users input is either C or c, Q or q then...
+		if [[ $answer = [CcQq] ]]; then # if the users input is either C or c, Q or q then...
 		    [[ $answer = [Cc] ]] && retval=0; # if the users input is either C or c, Q or q then...
+		    [[ $answer = [Qq] ]] && retval=1; # if the the users input it C or c set the retval = 0
 		    break; # break on command when done 
 		fi; # if the users input is Q or q set the retval = 1
 	done; # end if statement
@@ -215,3 +215,4 @@ fi; # end if statement
 if confirm1; then # if confirm1 function succeeds then...
 	process2; # run process 2
 fi; # end if statement
+# NOTE: DO NOT DELETE THE EXTRA LINE BELOW!
