@@ -185,7 +185,7 @@ confirm2() { # create new function/method
 } # end function/method
 
 confirm1() { # create new function/method
-	echo "${bold}PLEASE WAIT UNTIL XCODE COMMAND LINE TOOLS ARE DONE INSTALLING! THEN PRESS ${underline}C${nonunderline} TO CONTINUE!${nonbold}";
+	echo "${bold}PLEASE WAIT UNTIL XCODE COMMAND LINE TOOLS ARE DONE INSTALLING (UNLESS THEY ARE ALREADY INSTALLED; IF SO, YOU WILL GET AN ERROR ABOVE THIS LINE SAYING SO)! THEN PRESS ${underline}C${nonunderline} TO CONTINUE!${nonbold}";
 	while read -r -n 1 -s answer; do # enter a loop while reading the users input
 		if [[ $answer = [CcQq] ]]; then # if the users input is either C or c, Q or q then...
 		    [[ $answer = [Cc] ]] && retval=0; # if the users input is either C or c, Q or q then...
