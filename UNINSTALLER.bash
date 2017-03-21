@@ -88,13 +88,15 @@ echo " "My job is to uninstall the following:;
 echo " "\* rvm;
 echo " "\* User version of Ruby;
 echo " "\* All Ruby Gems including itself;
+echo " "\* xcode command line tools;
 echo " "\* The website project folder \(English-Project-master\);
 echo So basically everything that was installed with the ${underline}SETUP.sh${nonunderline} file${nonbold};
 
 process() {
 	echo "${bold}Uninstalling...${nonbold}";
-	rvm implode; # this will uninstall everything
-	rm -r ~/Desktop/Website-Shell-master/English-Project-master;
+	rvm implode; # this will uninstall rvm
+	$ rm -rf /Library/Developer/CommandLineTools; # this will uninstall xcode command line tools
+	rm -r ~/Desktop/Website-Shell-master/English-Project-master; # this will remove the website project folder
 	echo "${bold}Finished!${nonbold}";
 	exit;
 }

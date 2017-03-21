@@ -117,6 +117,6 @@ process() {
 if confirm; then
 	process;
 else
-	echo ${bold}That\'s to bad, please come back again sometime \:\)${nonbold}
+	echo ${bold}That\'s to bad, please come back again sometime \:\)${nonbold};
 	exit;
 fi;

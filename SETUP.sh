@@ -104,6 +104,7 @@ echo " "Here is what will be installed for my website:;
 echo " "\* rvm;
 echo "  "\o ruby;
 echo "  "\o ruby-gems;
+echo "  "\o xcode command line tools;
 echo " "At the end, you will see this text: ${underline}http://127.0.0.1:4000/${nonunderline}.;
 echo " "When that text appears, copy and paste this into your browser\'s URL bar:;
 echo " "${underline}http://localhost:4000/${nonunderline}. Finally, if at any time;
@@ -116,6 +117,7 @@ echo Thank you.;
 echo Please Enjoy!${BGreen}${nonbold};
 
 process1() { # create new function/method
+	xcode-select --install; # this will install xcode which is necessary for some of the command line tools
 	cd ~/Desktop/Website-Shell-master; # set the current directory to the user's desktop
 	echo 'Downloading website repository...';
 	curl -LOk "https://github.com/bag3318/English-Project/archive/master.zip"; # download website from repo
