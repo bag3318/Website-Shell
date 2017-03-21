@@ -5,7 +5,7 @@
 # Key: 
 # -------------------------------
 # `#` = comment in shell script
-# `--` comment in apple script
+# `--` = comment in applescript
 
 
 # Define preset variables
@@ -96,6 +96,7 @@ On_IWhite='\033[0;107m';   # White
 # =============================
 
 # quick note: echo = output text
+
 echo ${bold}${BGreen}Hi there,;
 echo " "My job is to successfully run my website on a local serve on your computer.;
 echo " "You will need WiFi for the initial setup, as well as for some parts;
@@ -118,11 +119,13 @@ echo Thank you.;
 echo Please Enjoy!${BGreen}${nonbold};
 
 process1() { # create new function/method
+	echo "Installing xcode command line tools...";
 	sudo xcode-select --install; # this will install xcode which is necessary for some of the command line tools
+	echo "Done!";
 }
 
 process2() {
-	echo "Installing Homebrew";
+	echo "Installing Homebrew...";
 	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"; # this installs homebrew
 	echo "Done!";
 	cd ~/Desktop/Website-Shell-master; # set the current directory to the user's desktop
@@ -133,7 +136,7 @@ process2() {
 	unzip master.zip -d ~/Desktop/Website-Shell-master; # unzip website .zip file
 	echo 'Done!';
 	echo 'Removing .zip file...';
-	rm master.zip; # remove website.zip file
+	rm master.zip; # remove website .zip file
 	echo 'Done!';
 	cd ~/Desktop/Website-Shell-master/English-Project-master; # set the current directory to the website folder
 	echo 'Downloading and installing rvm...';
@@ -191,9 +194,8 @@ confirm2() { # create new function/method
 confirm1() { # create new function/method
 	echo "${bold}PLEASE WAIT UNTIL XCODE COMMAND LINE TOOLS ARE DONE INSTALLING (UNLESS THEY ARE ALREADY INSTALLED; IF SO, YOU WILL GET AN ERROR ABOVE THIS LINE SAYING SO)! THEN PRESS ${underline}C${nonunderline} TO CONTINUE!${nonbold}";
 	while read -r -n 1 -s answer; do # enter a loop while reading the users input
-		if [[ $answer = [CcQq] ]]; then # if the users input is either C or c, Q or q then...
+		if [[ $answer = [Cc] ]]; then # if the users input is either C or c, Q or q then...
 		    [[ $answer = [Cc] ]] && retval=0; # if the users input is either C or c, Q or q then...
-		    [[ $answer = [Qq] ]] && retval=1; # if the the users input it C or c set the retval = 0
 		    break; # break on command when done 
 		fi; # if the users input is Q or q set the retval = 1
 	done; # end if statement
@@ -207,6 +209,6 @@ else # otherwise...
 	exit; # exit the process
 fi; # end if statement
 
-if confirm1; then 
-	process2;
-fi;
+if confirm1; then # if confirm1 function succeeds then...
+	process2; # run process 2
+fi; # end if statement
