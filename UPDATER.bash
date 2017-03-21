@@ -95,7 +95,7 @@ process() {
 }
 
 confirm() {
-	echo Would you like to update the website?;
+	echo ${bold}Would you like to update the website?${nonbold};
 	echo Press ${bold}u${normal} to ${underline}update${nonunderline}, or press ${bold}q${normal} to ${underline}quit${nonunderline} the process;
 	while read -r -n 1 -s answer; do
 		if [[ $answer = [UuQq] ]]; then
