@@ -110,7 +110,7 @@ echo " "When that text appears, copy and paste this into your browser\'s URL bar
 echo " "${underline}http://localhost:4000/${nonunderline}. Finally, if at any time;
 echo " "you wish to uninstall these dependencies after the installation, please;
 echo " "run the ${underline}UNINSTALLER.sh${nonunderline} file with the ${underline}Terminal${nonunderline}.;
-echo " "you want to stop the process, just keep pressing ${underline}control C${nonunderline} until;
+echo " "If you want to stop the process, just keep pressing ${underline}control C${nonunderline} until;
 echo " "the terminal logs you out.;
 echo " "That\'s all! \;\);
 echo Thank you.;
