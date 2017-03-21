@@ -119,4 +119,5 @@ if confirm; then
 else
 	echo ${bold}That\'s to bad, please come back again sometime \:\)${nonbold};
 	exit;
-fi;
+fi; 
+# NOTE: DO NOT DELETE THE EXTRA LINE BELOW!
