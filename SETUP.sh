@@ -96,7 +96,6 @@ On_IWhite='\033[0;107m';   # White
 # =============================
 
 # quick note: echo = output text
-echo ${italic}hello${nonitalic};
 echo ${bold}${BGreen}Hi there,;
 echo " "My job is to successfully run my website on a local serve on your computer.;
 echo " "You will need WiFi for the initial setup, as well as for some parts;
