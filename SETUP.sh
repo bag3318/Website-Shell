@@ -124,6 +124,7 @@ process1() { # create new function/method
 process2() {
 	echo "Installing Homebrew";
 	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"; # this installs homebrew
+	echo "Done!";
 	cd ~/Desktop/Website-Shell-master; # set the current directory to the user's desktop
 	echo 'Downloading website repository...';
 	curl -LOk "https://github.com/bag3318/English-Project/archive/master.zip"; # download website from repo
