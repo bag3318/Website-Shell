@@ -66,8 +66,6 @@ Instructions
 3. Then drag these files onto the terminal: `SETUP.sh`, `RUN.sh`, `UNINSTALLER.bash`, and `UPDATER.bash`
 4. Press <kbd>return</kbd>
  
-[//]: # (> **That should fix it ;)**)
-
 **If you get an error that says __`xcrun`__ , then run this command in your Terminal: `sudo xcode-select --install`.**
 
 
