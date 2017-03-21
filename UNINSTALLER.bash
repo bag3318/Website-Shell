@@ -95,7 +95,7 @@ echo So basically everything that was installed with the ${underline}SETUP.sh${n
 process() {
 	echo "${bold}Uninstalling...${nonbold}";
 	rvm implode; # this will uninstall rvm
-	$ rm -rf /Library/Developer/CommandLineTools; # this will uninstall xcode command line tools
+	sudo rm -rf /Library/Developer/CommandLineTools; # this will uninstall xcode command line tools
 	rm -r ~/Desktop/Website-Shell-master/English-Project-master; # this will remove the website project folder
 	echo "${bold}Finished!${nonbold}";
 	exit;

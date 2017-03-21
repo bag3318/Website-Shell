@@ -108,7 +108,7 @@ echo "  "\o xcode command line tools;
 echo " "At the end, you will see this text: ${underline}http://127.0.0.1:4000/${nonunderline}.;
 echo " "When that text appears, copy and paste this into your browser\'s URL bar:;
 echo " "${underline}http://localhost:4000/${nonunderline}. Finally, if at any time;
-echo " "If you wish to uninstall these dependencies after the installation, please;
+echo " "you wish to uninstall these dependencies after the installation, please;
 echo " "run the ${underline}UNINSTALLER.sh${nonunderline} file with the ${underline}Terminal${nonunderline}.;
 echo " "you want to stop the process, just keep pressing ${underline}control C${nonunderline} until;
 echo " "the terminal logs you out.;
@@ -117,7 +117,10 @@ echo Thank you.;
 echo Please Enjoy!${BGreen}${nonbold};
 
 process1() { # create new function/method
-	xcode-select --install; # this will install xcode which is necessary for some of the command line tools
+	sudo xcode-select --install; # this will install xcode which is necessary for some of the command line tools
+}
+
+process2() {
 	cd ~/Desktop/Website-Shell-master; # set the current directory to the user's desktop
 	echo 'Downloading website repository...';
 	curl -LOk "https://github.com/bag3318/English-Project/archive/master.zip"; # download website from repo
@@ -166,10 +169,10 @@ $1" -- indicates that the bash script ends here
 end tell -- ends the tell function
 EOS
 # -- end applescript
-	exit; # exit the process
+	exit; # exit the process		 
 } # end function/method
 
-confirm1() { # create new function/method
+confirm2() { # create new function/method
 	echo "Press ${bold}c${nonbold} to ${underline}continue${nonunderline}, or press ${bold}q${nonbold} to ${underline}quit${nonunderline} the process";
 	while read -r -n 1 -s answer; do # enter a loop while reading the users input
 		if [[ $answer = [CcQq] ]]; then # if the users input is either C or c, Q or q then...
@@ -181,9 +184,25 @@ confirm1() { # create new function/method
 	return $retval; # return the command: retval's value
 } # end function/method
 
-if confirm1; then # if the confirm1 method/process is successful, then...
+confirm1() { # create new function/method
+	echo "${bold}PLEASE WAIT UNTIL XCODE COMMAND LINE TOOLS ARE DONE INSTALLING! THEN PRESS ${underline}C${nonunderline} TO CONTINUE!${nonbold}";
+	while read -r -n 1 -s answer; do # enter a loop while reading the users input
+		if [[ $answer = [CcQq] ]]; then # if the users input is either C or c, Q or q then...
+		    [[ $answer = [Cc] ]] && retval=0; # if the users input is either C or c, Q or q then...
+		    [[ $answer = [Qq] ]] && retval=1; # if the the users input it C or c set the retval = 0
+		    break; # break on command when done 
+		fi; # if the users input is Q or q set the retval = 1
+	done; # end if statement
+	return $retval; # return the command: retval's value
+} # end function/method
+
+if confirm2; then # if the confirm1 method/process is successful, then...
 	process1; # run the process1 function/method
 else # otherwise...
 	echo "${bold}That's too bad, please come back again sometime :)${nonbold}";
 	exit; # exit the process
 fi; # end if statement
+
+if confirm1; then 
+	process2;
+fi;
