@@ -92,17 +92,29 @@ echo " "\* xcode command line tools;
 echo " "\* The website project folder \(English-Project-master\);
 echo So basically everything that was installed with the ${underline}SETUP.sh${nonunderline} file${nonbold};
 
-process() {
+process1() {
 	echo "${bold}Uninstalling...${nonbold}";
 	rvm implode; # this will uninstall rvm
 	sudo rm -rf /Library/Developer/CommandLineTools; # this will uninstall xcode command line tools
 	sudo /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall)" # unistalls homebrew
-	rm -r ~/Desktop/Website-Shell-master/English-Project-master; # this will remove the website project folder
-	echo "${bold}Finished!${nonbold}";
-	exit;
+	sudo rm -r ~/Desktop/Website-Shell-master/English-Project-master; # this will remove the website project folder
 }
 
-confirm() {
+process2() {
+	sudo rm -r /usr/local/bin/; 
+	sudo rm -r /usr/local/etc/;
+	sudo rm -r /usr/local/git/;
+	sudo rm -r /usr/local/include/;
+	sudo rm -r /usr/local/lib/;
+	sudo rm -r /usr/local/man/;
+	sudo rm -r /usr/local/remotedesktop/;
+	sudo rm -r /usr/local/sbin/;
+	sudo rm -r /usr/local/share/;
+	sudo rm -r /usr/local/var/;
+	echo "${bold}Done!${nonbold}";
+}
+
+confirm1() {
 	echo Are you sure you want to uninstall? \(${bold}Y/N${nonbold}\);
 	while read -r -n 1 -s answer; do
 		if [[ $answer = [YyNn] ]]; then
@@ -114,8 +126,26 @@ confirm() {
 	return $retval;
 }
 
-if confirm; then
-	process;
+confirm2() {
+	echo Are you sure you want to remove these folders? \(${bold}Y/N${nonbold}\);
+	while read -r -n 1 -s answer; do
+		if [[ $answer = [YyNn] ]]; then
+		    [[ $answer = [Yy] ]] && retval=0;
+		    [[ $answer = [Nn] ]] && retval=1;
+		    break;
+		fi;
+	done;
+	return $retval;
+}
+
+if confirm1; then
+	process1;
+else
+	echo ${bold}Bye${nonbold};
+	exit;
+fi;
+if confirm2; then
+	process2;
 else
 	echo ${bold}k${nonbold};
 	exit;

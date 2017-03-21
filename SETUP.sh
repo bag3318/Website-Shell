@@ -119,10 +119,10 @@ echo Please Enjoy!${BGreen}${nonbold};
 process1() { # create new function/method
 	echo "Installing xcode command line tools...";
 	sudo xcode-select --install; # this will install xcode which is necessary for some of the command line tools
-	echo "Done!";
 }
 
 process2() {
+	echo "Done!";
 	echo "Installing Homebrew...";
 	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"; # this installs homebrew
 	echo "Done!";
