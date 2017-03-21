@@ -27,8 +27,9 @@ Instructions
 #### First Time Installing
 
 1. Download the `.zip` file for this repo and move it to your `Desktop` (__this is important__)
-   * To download, click on the green button above and then click `Download ZIP`
-2. Extract the `.zip` file by `double clicking` it
+   * To download, click on the green button above (`Clone or download`) and then click `Download ZIP`
+   * To find the .zip file, press <kbd>command</kbd> and <kbd>space</kbd> at the same time and type in `Website-Shell-master.zip`, then drag the `Website-Shell-master.zip` file listed to your `Desktop`. 
+2. Then go to your desktop and extract the `.zip` file by `double clicking` it
 3. Delete the `.zip` file as it is not needed anymore
 4. Open up the extracted folder
 5. Open the `SETUP.sh` file with the `Terminal`
@@ -65,9 +66,16 @@ Instructions
 3. Then drag these files onto the terminal: `SETUP.sh`, `RUN.sh`, `UNINSTALLER.bash`, and `UPDATER.bash`
 4. Press <kbd>return</kbd>
  
-> **That should fix it ;)**
+[//]: # (> **That should fix it ;)**)
 
-__For any other issues, please leave them in the issues tab so I can solve them ASAP. Thanks__
+**If you get an error that says __`xcrun`__ , then run this command in your Terminal: `sudo xcode-select --install`.**
+
+
+**If your your installation of RVM fails with a `status of 1` (you will see it in red text), then run this in your terminal: `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`.**
+
+**If you get a connection error, then make sure you are connected to WiFi.**
+
+__For any other issues, please leave them in the issues tab or email me them so I can fix them ASAP. Thanks__
 
 > Please note that anything in the `Terminal` that has the word `WARNING` (in caps or lower) next to it, or is in `yellow` color is not an error, so you won't have to worry about those things. Errors are *typically* `red` (*though not always*) and have the word `ERROR` (in caps or lower) next to them. 
 
