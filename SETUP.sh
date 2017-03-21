@@ -17,8 +17,6 @@ bold=`tput bold`;         # Select bold mode
 nonbold=`tput sgr0` 	  # Select non-bold mode
 underline=`tput smul`;    # Select underline mode
 nonunderline=`tput rmul`; # Select non-underline mode
-italic='\e[3';
-nonitalic='\e[0m';
 
 # Reset
 Color_Off='\033[0m';       # Text Reset
@@ -123,7 +121,7 @@ process1() { # create new function/method
 	sudo xcode-select --install; # this will install xcode which is necessary for some of the command line tools
 	echo "Done!";
 }
-# test
+
 process2() {
 	echo "Installing Homebrew...";
 	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"; # this installs homebrew
@@ -145,7 +143,13 @@ process2() {
 	echo 'Done!';
 	echo 'Opening new window to refresh rvm...';
 	echo 'Done!';
-	# DO NOT TOUCH THE CODE BELOW (between begin and end applescript); EVEN ADDING A SPACE WILL SCREW EVERYTHING UP!
+	process3; # run process 3
+	exit; # exit the process		 
+} # end function/method
+
+process3() {
+# WARNING: DO NOT TOUCH THE CODE BELOW (between begin and end applescript); EVEN ADDING A SPACE WILL SCREW EVERYTHING UP!
+# WARNING 2: DO NOT FORMAT THE CODE BELOW; DOING SO WILL RESULT IN A COMPILATION ERROR!
 # -- begin applescript
 osascript <<EOS
 tell application "Terminal" -- tells the Terminal application to ...
@@ -176,8 +180,7 @@ $1" -- indicates that the bash script ends here
 end tell -- ends the tell function
 EOS
 # -- end applescript
-	exit; # exit the process		 
-} # end function/method
+}
 
 confirm2() { # create new function/method
 	echo "Press ${bold}c${nonbold} to ${underline}continue${nonunderline}, or press ${bold}q${nonbold} to ${underline}quit${nonunderline} the process";

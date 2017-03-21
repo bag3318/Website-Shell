@@ -96,7 +96,7 @@ process() {
 	echo "${bold}Uninstalling...${nonbold}";
 	rvm implode; # this will uninstall rvm
 	sudo rm -rf /Library/Developer/CommandLineTools; # this will uninstall xcode command line tools
-	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall)" # unistalls homebrew
+	sudo /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall)" # unistalls homebrew
 	rm -r ~/Desktop/Website-Shell-master/English-Project-master; # this will remove the website project folder
 	echo "${bold}Finished!${nonbold}";
 	exit;
