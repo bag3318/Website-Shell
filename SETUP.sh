@@ -5,8 +5,8 @@
 # |-----------------------------------|
 # | Key:                              |
 # |-----------------------------------|
-# | `#` = comment in shell script     |
-# | `--` = comment in applescript     |
+# | # = comment in shell script       |
+# | -- = comment in applescript       |
 # |___________________________________|
 
 master_function() { # create master function
