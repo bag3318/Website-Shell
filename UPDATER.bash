@@ -119,4 +119,3 @@ masterfunction() {
 	initfunction;
 }
 masterfunction;
-# NOTE: DO NOT DELETE THE EXTRA LINE BELOW!

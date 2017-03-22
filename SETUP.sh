@@ -8,7 +8,7 @@
 # `--` = comment in applescript
 
 
-masterfunction() {
+masterfunction() { # create master function
 
 	# Define preset variables
 	# =============================
@@ -118,12 +118,12 @@ masterfunction() {
 	echo Thank you.;
 	echo Please Enjoy!${BGreen}${nonbold};
 
-	processes() {
+	processes() { # create master process function
 		process1() { # create new function/method
 			echo "Installing xcode command line tools...";
 			sudo xcode-select --install; # this will install xcode which is necessary for some of the command line tools
-		}
-		process2() {
+		} # end function
+		process2() { # define process 2 function
 			echo 'Done!';
 			echo 'Installing Homebrew...';
 			/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"; # this installs homebrew
@@ -149,43 +149,43 @@ masterfunction() {
 			exit; # exit the process		 
 		} # end function/method
 
-		process3() {
+		process3() { # define process 3 function
 			# WARNING: DO NOT TOUCH THE CODE BELOW (between begin and end applescript); EVEN ADDING A SPACE WILL SCREW EVERYTHING UP!
 			# WARNING 2: DO NOT INDENT/FORMAT THE CODE BELOW; DOING SO WILL RESULT IN A COMPILATION ERROR!
 			# -- begin applescript
-			osascript <<EOS
-			tell application "Terminal" -- tells the Terminal application to ...
-			do script " # do this script: 
-			echo 'Installing bundler gem...';
-			gem install bundler; # installs bundler gem
-			echo 'Done!';
-			echo 'Installing jekyll gem...'; 
-			gem install jekyll; # installs the jekyll gem
-			echo 'Done!';
-			cd ~/Desktop/Website-Shell-master/English-Project-master; # set the current directory to the website project folder
-			echo 'Installing gems needed for website to run...';
-			bundle install; # installs gems needed for the website to run
-			echo 'Done!';
-			echo 'Building gemspec file...';
-			gem build minimal-mistakes-jekyll.gemspec; # builds gemspec file
-			echo 'Done!';
-			echo 'Installing built .gem file...';
-			gem install minimal-mistakes-jekyll-4.0.9.gem; # installs .gem file
-			echo 'Done!';
-			echo 'Updating gems...';
-			bundle update; # updates gems 
-			echo 'Done!';
-			echo 'Compiling and executing web page to local server...';
-			bundle exec jekyll serve; # compiles and executes web page to local server
-			echo 'End server execution process';
-			$1" -- indicates that the bash script ends here
-			end tell -- ends the tell function
+osascript <<EOS
+tell application "Terminal" -- tells the Terminal application to ...
+do script " # do this script: 
+echo 'Installing bundler gem...';
+gem install bundler; # installs bundler gem
+echo 'Done!';
+echo 'Installing jekyll gem...'; 
+gem install jekyll; # installs the jekyll gem
+echo 'Done!';
+cd ~/Desktop/Website-Shell-master/English-Project-master; # set the current directory to the website project folder
+echo 'Installing gems needed for website to run...';
+bundle install; # installs gems needed for the website to run
+echo 'Done!';
+echo 'Building gemspec file...';
+gem build minimal-mistakes-jekyll.gemspec; # builds gemspec file
+echo 'Done!';
+echo 'Installing built .gem file...';
+gem install minimal-mistakes-jekyll-4.0.9.gem; # installs .gem file
+echo 'Done!';
+echo 'Updating gems...';
+bundle update; # updates gems 
+echo 'Done!';
+echo 'Compiling and executing web page to local server...';
+bundle exec jekyll serve; # compiles and executes web page to local server
+echo 'End server execution process';
+$1" -- indicates that the bash script ends here
+end tell -- ends the tell function
 EOS
 			# -- end applescript
-		}
-	}
-	processes;
-	confirmations() {
+		} # end function
+	} # end mmaster function
+	processes; # call processes function
+	confirmations() { # create confirmations master function
 		confirm1() { # create new function/method
 			echo "${bold}PLEASE WAIT UNTIL XCODE COMMAND LINE TOOLS ARE DONE INSTALLING (UNLESS THEY ARE ALREADY INSTALLED; IF SO, YOU WILL GET AN ERROR ABOVE THIS LINE SAYING SO)! THEN PRESS ${underline}C${nonunderline} TO CONTINUE!${nonbold}";
 			while read -r -n 1 -s answer; do # enter a loop while reading the users input
@@ -207,26 +207,28 @@ EOS
 			done; # end if statement
 			return $retval; # return the command: retval's value
 		} # end function/method
-	}
-	confirmations;
-	initfunctions() {
-		initfunction1() {
+	} # end master function
+	confirmations; # call confirmations master function
+	initfunctions() { # create init function's master function
+		initfunction1() { # define init function 1
 			if confirm2; then # if the confirm2 method/process is successful, then...
 				process1; # run the process1 function/method
 			else # otherwise...
 				echo "${bold}That's too bad, please come back again sometime :)${nonbold}";
 				exit; # exit the process
 			fi; # end if statement
-		}
-		initfunction1;
-		initfunction2() {
+		} # end function
+		initfunction1; # call init function 1
+		initfunction2() { # create init function 2
 			if confirm1; then # if confirm1 function succeeds then...
 				process2; # run process 2
 			fi; # end if statement
-		}
-		initfunction2;
-	}
-	initfunctions;
-}
+		} # end function
+		initfunction2; # call init function 2
+	} # end master function
+	initfunctions; # call init function's master function
+} # end master function
+masterfunction; # call master function
 
-masterfunction;
+
+
