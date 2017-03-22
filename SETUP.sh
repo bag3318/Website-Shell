@@ -152,7 +152,7 @@ masterfunction() { # create master function
 		process3() { # define process 3 function
 			# WARNING: DO NOT TOUCH THE CODE BELOW (between begin and end applescript); EVEN ADDING A SPACE WILL SCREW EVERYTHING UP!
 			# WARNING 2: DO NOT INDENT/FORMAT THE CODE BELOW; DOING SO WILL RESULT IN A COMPILATION ERROR!
-			# -- begin applescript
+# -- begin applescript
 osascript <<EOS
 tell application "Terminal" -- tells the Terminal application to ...
 do script " # do this script: 
@@ -181,7 +181,7 @@ echo 'End server execution process';
 $1" -- indicates that the bash script ends here
 end tell -- ends the tell function
 EOS
-			# -- end applescript
+# -- end applescript
 		} # end function
 	} # end mmaster function
 	processes; # call processes function
