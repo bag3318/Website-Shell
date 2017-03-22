@@ -178,7 +178,7 @@ master_function() { # create master function
                 echo 'End server execution process';
                 exit; # exits the process
                 $1\" -- ends the script
-			end tell" # end applescript
+            end tell" # end applescript
 		} # end function
 	} # end mmaster function
 	processes; # call processes function
