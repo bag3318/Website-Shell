@@ -98,13 +98,14 @@ masterfunction()  {
 			echo "${bold}Uninstalling...${nonbold}";
 			rvm implode; # this will uninstall rvm
 			# Note you may need to manually remove /etc/rvmrc and ~/.rvmrc if they exist still.
+			echo ${bold}Removing leftover folders not removed by RVM...${nonbold};
 			rm -r /etc/rvmrc;
 			rm -r ~/.rvmrc;
+			echo ${bold}Done removing leftover folders${nonbold};
 			sudo rm -rf /Library/Developer/CommandLineTools; # this will uninstall xcode command line tools
 			/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall)" # unistalls homebrew
 			rm -r ~/Desktop/Website-Shell-master/English-Project-master; # this will remove the website project folder
 		}
-
 		process2() {
 			sudo rm -r /usr/local/bin/; 
 			sudo rm -r /usr/local/etc/;
