@@ -6,7 +6,7 @@
 # -------------------------------
 # `#` = comment in shell script
 # `--` = comment in applescript
-
+# _______________________________
 
 masterfunction() { # create master function
 
