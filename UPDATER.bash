@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-masterfunction() {
+master_function() {
 	# Define preset variables
 	# =============================
 
@@ -108,7 +108,7 @@ masterfunction() {
 		done;
 		return $retval;
 	}
-	initfunction() {
+	init_function() {
 		if confirm; then
 			process;
 		else
@@ -116,6 +116,6 @@ masterfunction() {
 			exit;
 		fi;
 	}
-	initfunction;
+	init_function;
 }
-masterfunction;
+master_function;

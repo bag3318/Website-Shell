@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-masterfunction()  {
+master_function()  {
 	# Define preset variables
 	# =============================
 
@@ -147,8 +147,8 @@ masterfunction()  {
 		}
 	}
 	confirmations;
-	initfunctions() {
-		initfunction1() {
+	init_functions() {
+		init_function1() {
 			if confirm1; then
 				process1;
 			else
@@ -157,7 +157,7 @@ masterfunction()  {
 				exit;
 			fi;
 		}	
-		initfunction2() {
+		init_function2() {
 			if confirm2; then
 				process2;
 			else
@@ -165,9 +165,9 @@ masterfunction()  {
 				exit;
 			fi;
 		}	
-		initfunction1;
-		initfunction2;
+		init_function1;
+		init_function2;
 	}
-	initfunctions;
+	init_functions;
 }
-masterfunction;
+master_function;

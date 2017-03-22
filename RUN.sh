@@ -1,10 +1,10 @@
 #!/bin/sh
 
-masterfunction() {
+master_function() {
 
 	# Define preset variables
 	# =======================
-	
+
 	# Text Emphasis
 	normal=$(tput sgr0);      # Select normal mode
 	bold=`tput bold`;         # Select bold mode
@@ -116,7 +116,7 @@ masterfunction() {
 		echo Thank you for viewing my website \:\)${normal};
 		exit;
 	}
-	initfunction() {
+	init_function() {
 		if confirm; then
 			process;
 		else
@@ -124,6 +124,6 @@ masterfunction() {
 			exit;
 		fi; 
 	}
-	initfunction;
+	init_function;
 }
-masterfunction;
+master_function;

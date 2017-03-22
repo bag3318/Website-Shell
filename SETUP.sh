@@ -9,7 +9,7 @@
 # | `--` = comment in applescript     |
 # |___________________________________|
 
-masterfunction() { # create master function
+master_function() { # create master function
 
 	# Define preset variables
 	# =============================
@@ -179,6 +179,7 @@ echo 'Done!';
 echo 'Compiling and executing web page to local server...';
 bundle exec jekyll serve; # compiles and executes web page to local server
 echo 'End server execution process';
+exit; # exits the process
 $1" -- indicates that the bash script ends here
 end tell -- ends the tell function
 EOS
@@ -210,8 +211,8 @@ EOS
 		} # end function/method
 	} # end master function
 	confirmations; # call confirmations master function
-	initfunctions() { # create init function's master function
-		initfunction1() { # define init function 1
+	init_functions() { # create init function's master function
+		init_function1() { # define init function 1
 			if confirm2; then # if the confirm2 method/process is successful, then...
 				process1; # run the process1 function/method
 			else # otherwise...
@@ -219,14 +220,14 @@ EOS
 				exit; # exit the process
 			fi; # end if statement
 		} # end function
-		initfunction1; # call init function 1
-		initfunction2() { # create init function 2
+		init_function1; # call init function 1
+		init_function2() { # create init function 2
 			if confirm1; then # if confirm1 function succeeds then...
 				process2; # run process 2
 			fi; # end if statement
 		} # end function
-		initfunction2; # call init function 2
+		init_function2; # call init function 2
 	} # end master function
-	initfunctions; # call init function's master function
+	init_functions; # call init function's master function
 } # end master function
-masterfunction; # call master function
+master_function; # call master function
