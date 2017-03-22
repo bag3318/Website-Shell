@@ -119,6 +119,7 @@ masterfunction()  {
 			echo "${bold}Done!${nonbold}";
 		}
 	}
+	processes;
 	confirmations() {
 		confirm1() {
 			echo Are you sure you want to uninstall? \(${bold}Y/N${nonbold}\);

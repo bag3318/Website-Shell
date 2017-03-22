@@ -1,12 +1,13 @@
 #!/bin/sh
 
-# Code > English comments available
-# -------------------------------
-# Key: 
-# -------------------------------
-# `#` = comment in shell script
-# `--` = comment in applescript
-# _______________________________
+# |===================================|
+# | Code > English comments available |
+# |-----------------------------------|
+# | Key:                              |
+# |-----------------------------------|
+# | `#` = comment in shell script     |
+# | `--` = comment in applescript     |
+# |___________________________________|
 
 masterfunction() { # create master function
 
@@ -229,6 +230,3 @@ EOS
 	initfunctions; # call init function's master function
 } # end master function
 masterfunction; # call master function
-
-
-
