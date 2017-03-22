@@ -120,7 +120,7 @@ master_function() { # create master function
 	echo Please Enjoy!${BGreen}${nonbold};
 
 	processes() { # create master process function
-		process1() { # create new function/method
+		process1() { # create new function
 			echo "Installing xcode command line tools...";
 			sudo xcode-select --install; # this will install xcode which is necessary for some of the command line tools
 		} # end function
@@ -148,7 +148,7 @@ master_function() { # create master function
 			echo 'Done!';
 			process3; # run process 3
 			exit; # exit the process		 
-		} # end function/method
+		} # end function
 
 		process3() { # define process 3 function
 			# WARNING: DO NOT TOUCH THE CODE BELOW (between begin and end applescript); EVEN ADDING A SPACE WILL SCREW EVERYTHING UP!
@@ -188,7 +188,7 @@ EOS
 	} # end mmaster function
 	processes; # call processes function
 	confirmations() { # create confirmations master function
-		confirm1() { # create new function/method
+		confirm1() { # create new function
 			echo "${bold}PLEASE WAIT UNTIL XCODE COMMAND LINE TOOLS ARE DONE INSTALLING (UNLESS THEY ARE ALREADY INSTALLED; IF SO, YOU WILL GET AN ERROR ABOVE THIS LINE SAYING SO)! THEN PRESS ${underline}C${nonunderline} TO CONTINUE!${nonbold}";
 			while read -r -n 1 -s answer; do # enter a loop while reading the users input
 				if [[ $answer = [Cc] ]]; then # if the users input is either C or c, Q or q then...
@@ -197,8 +197,8 @@ EOS
 				fi; # if the users input is Q or q set the retval = 1
 			done; # end if statement
 			return $retval; # return the command: retval's value
-		} # end function/method
-		confirm2() { # create new function/method
+		} # end function
+		confirm2() { # create new function
 			echo "Press ${bold}c${nonbold} to ${underline}continue${nonunderline}, or press ${bold}q${nonbold} to ${underline}quit${nonunderline} the process";
 			while read -r -n 1 -s answer; do # enter a loop while reading the users input
 				if [[ $answer = [CcQq] ]]; then # if the users input is either C or c, Q or q then...
@@ -208,13 +208,13 @@ EOS
 				fi; # if the users input is Q or q set the retval = 1
 			done; # end if statement
 			return $retval; # return the command: retval's value
-		} # end function/method
+		} # end function
 	} # end master function
 	confirmations; # call confirmations master function
 	init_functions() { # create init function's master function
 		init_function1() { # define init function 1
-			if confirm2; then # if the confirm2 method/process is successful, then...
-				process1; # run the process1 function/method
+			if confirm2; then # if the confirm2 process is successful, then...
+				process1; # run the process1 function
 			else # otherwise...
 				echo "${bold}That's too bad; please come back again sometime :)${nonbold}";
 				exit; # exit the process
