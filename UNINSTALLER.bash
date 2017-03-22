@@ -9,7 +9,7 @@ bold=`tput bold`;         # Select bold mode
 nonbold=`tput sgr0` 	  # Select non-bold mode
 underline=`tput smul`;    # Select underline mode
 nonunderline=`tput rmul`; # Select non-underline mode
-#
+
 # Reset
 Color_Off='\033[0m';       # Text Reset
 
@@ -95,6 +95,9 @@ echo So basically everything that was installed with the ${underline}SETUP.sh${n
 process1() {
 	echo "${bold}Uninstalling...${nonbold}";
 	rvm implode; # this will uninstall rvm
+	# Note you may need to manually remove /etc/rvmrc and ~/.rvmrc if they exist still.
+	rm -r /etc/rvmrc;
+	rm -r ~/.rvmrc;
 	sudo rm -rf /Library/Developer/CommandLineTools; # this will uninstall xcode command line tools
 	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall)" # unistalls homebrew
 	rm -r ~/Desktop/Website-Shell-master/English-Project-master; # this will remove the website project folder

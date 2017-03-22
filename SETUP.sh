@@ -7,7 +7,6 @@
 # `#` = comment in shell script
 # `--` = comment in applescript
 
-
 # Define preset variables
 # =============================
 
@@ -105,12 +104,12 @@ echo " "\* rvm;
 echo "  "\o ruby;
 echo "  "\o ruby-gems;
 echo " "\* xcode command line tools;
-echo " "\* homebrew
-echo " "At the end, you will see this text: ${underline}http://127.0.0.1:4000/${nonunderline}.;
+echo " "\* homebrew;
+echo " "If at any time you wish to uninstall these dependencies after;
+echo " "the installation, please run the ${underline}UNINSTALLER.sh${nonunderline} file with the ${underline}Terminal${nonunderline}.;
+echo " "Finally, at the end, you will see this text: ${underline}http://127.0.0.1:4000/${nonunderline}.;
 echo " "When that text appears, copy and paste this into your browser\'s URL bar:;
-echo " "${underline}http://localhost:4000/${nonunderline}. Finally, if at any time;
-echo " "you wish to uninstall these dependencies after the installation, please;
-echo " "run the ${underline}UNINSTALLER.sh${nonunderline} file with the ${underline}Terminal${nonunderline}.;
+echo " "${underline}http://localhost:4000/${nonunderline}.
 echo " "If you want to stop the process, just keep pressing ${underline}control D${nonunderline};
 echo " "That\'s all! \;\);
 echo Thank you.;
