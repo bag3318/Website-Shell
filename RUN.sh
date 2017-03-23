@@ -86,11 +86,12 @@ master_function() {
 	On_IWhite='\033[0;107m';   # White
 
 	# quick note: echo = output text
-
-	echo ${bold}This shell file will run the website if the SETUP.sh file;
-	echo has already run successfully. Otherwise, go run the;
-	echo ${underline}SETUP.sh${nonunderline} file first.${nonbold};
-
+	echos() {
+		echo ${bold}This shell file will run the website if the SETUP.sh file;
+		echo has already run successfully. Otherwise, go run the;
+		echo ${underline}SETUP.sh${nonunderline} file first.${nonbold};
+	}
+	echos;
 	confirm() {
 		echo ${bold}Note: Once the server is running, copy and paste this into your browser\'s URL;
 		echo bar: ${underline}localhost:4000${nonunderline} and then hit ${underline}return${nonunderline}${normal};

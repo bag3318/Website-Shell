@@ -2,7 +2,7 @@
 
 
 master_function()  {
-	
+
 	# Define preset variables
 	# =============================
 
@@ -86,14 +86,17 @@ master_function()  {
 	On_ICyan='\033[0;106m';    # Cyan
 	On_IWhite='\033[0;107m';   # White
 
-	echo ${bold}Hey there,;
-	echo " "My job is to uninstall the following:;
-	echo " "\* rvm;
-	echo " "\* User version of Ruby;
-	echo " "\* All Ruby Gems including itself;
-	echo " "\* xcode command line tools;
-	echo " "\* The website project folder \(English-Project-master\);
-	echo So basically everything that was installed with the ${underline}SETUP.sh${nonunderline} file${nonbold};
+	echos() {
+		echo ${bold}Hey there,;
+		echo " "My job is to uninstall the following:;
+		echo " "\* rvm;
+		echo " "\* User version of Ruby;
+		echo " "\* All Ruby Gems including itself;
+		echo " "\* xcode command line tools;
+		echo " "\* The website project folder \(English-Project-master\);
+		echo So basically everything that was installed with the ${underline}SETUP.sh${nonunderline} file${nonbold};
+	}
+	echos;
 	processes() {
 		process1() {
 			echo "${bold}Uninstalling...${nonbold}";

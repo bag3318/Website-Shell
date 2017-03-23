@@ -97,28 +97,29 @@ master_function() { # create master function
 	# =============================
 
 	# quick note: echo = output text
-
-	echo ${bold}${BGreen}Hi there,;
-	echo " "My job is to successfully run my website on a local serve on your computer.;
-	echo " "You will need WiFi for the initial setup, as well as for some parts;
-	echo " "of the website. If you encounter any errors, just leave them in the issues;
-	echo " "tab on github or email me and I will try to fix them ASAP.;
-	echo " "Here is what will be installed for my website:;
-	echo " "\* rvm;
-	echo "  "\o ruby;
-	echo "  "\o ruby-gems;
-	echo " "\* xcode command line tools;
-	echo " "\* homebrew;
-	echo " "If at any time you wish to uninstall these dependencies after;
-	echo " "the installation, please run the ${underline}UNINSTALLER.sh${nonunderline} file with the ${underline}Terminal${nonunderline}.;
-	echo " "Finally, at the end, you will see this text: ${underline}http://127.0.0.1:4000/${nonunderline}.;
-	echo " "When that text appears, copy and paste this into your browser\'s URL bar:;
-	echo " "${underline}http://localhost:4000/${nonunderline}.
-	echo " "If you want to stop the process, just keep pressing ${underline}control D${nonunderline};
-	echo " "That\'s all! \;\);
-	echo Thank you.;
-	echo Please Enjoy!${BGreen}${nonbold};
-
+	echos() {
+		echo ${bold}${BGreen}Hi there,;
+		echo " "My job is to successfully run my website on a local serve on your computer.;
+		echo " "You will need WiFi for the initial setup, as well as for some parts;
+		echo " "of the website. If you encounter any errors, just leave them in the issues;
+		echo " "tab on github or email me and I will try to fix them ASAP.;
+		echo " "Here is what will be installed for my website:;
+		echo " "\* rvm;
+		echo "  "\o ruby;
+		echo "  "\o ruby-gems;
+		echo " "\* xcode command line tools;
+		echo " "\* homebrew;
+		echo " "If at any time you wish to uninstall these dependencies after;
+		echo " "the installation, please run the ${underline}UNINSTALLER.sh${nonunderline} file with the ${underline}Terminal${nonunderline}.;
+		echo " "Finally, at the end, you will see this text: ${underline}http://127.0.0.1:4000/${nonunderline}.;
+		echo " "When that text appears, copy and paste this into your browser\'s URL bar:;
+		echo " "${underline}http://localhost:4000/${nonunderline}.
+		echo " "If you want to stop the process, just keep pressing ${underline}control D${nonunderline};
+		echo " "That\'s all! \;\);
+		echo Thank you.;
+		echo Please Enjoy!${BGreen}${nonbold};
+	}
+	echos;
 	processes() { # create master process function
 		process1() { # create new function
 			echo "Installing xcode command line tools...";
