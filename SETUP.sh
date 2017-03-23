@@ -11,7 +11,6 @@
 
 master_function() { # create master function
 
-
 	# Define preset variables
 	# =============================
 
@@ -148,7 +147,7 @@ master_function() { # create master function
 			echo 'Opening new window to refresh rvm...';
 			echo 'Done!';
 			process3; # run process 3
-			exit; # exit the process		 
+			# exit; # exit the process		 
 		} # end function
 
 		process3() { # define process 3 function
